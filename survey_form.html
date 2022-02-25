@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Survey Form</title>        
+        <link rel="stylesheet" type="text/css" href="./css/survey_form.css">
+    </header>
+    <body>
+        <h1 id="title"> Formulário Serviço Restaurante</h1>
+        <p id="description"> Abaixo segue um formulario para um cliente avaliar os serviços de um restaurante.</p>
+        <hr>
+        <main>
+            <form action="POST" id="survey-form">
+                <label  id="name-label" for="name">Name: </label>    
+                <input type="text" id="name" placeholder="Insira o nome">
+
+                <label  id="email-label" for="email">Email: </label>    
+                <input type="email" name="email" id="email" placeholder="test123@gmail.com">
+
+                <label for="dropdown">Refeição: </label>  
+                <select name="dropdown" id="dropdown">
+                    <option value="almoço">Almoço</option>
+                    <option value="jantar">Jantar</option>
+                    <option value="café">Cafe</option>
+                </select>
+                <fieldset>
+                    <legend>Nota da Refeição </legend>
+                    <label for="ruim">Ruim </label>  
+                    <input id="ruim" type="radio" name="qualidade" value="Ruim" >
+                    <label for="normal">Normal </label> 
+                    <input id="normal" type="radio" name="qualidade" value="Normal" >
+                    <label for="bom">Bom </label> 
+                    <input id="bom" type="radio" name="qualidade" value="Bom" >
+                    <label for="exelente">Excelente </label> 
+                    <input id="exelente"  type="radio" name="qualidade" value="Excelente" checked>
+                </fieldset>
+
+                <label  id="number-label" for="number">Atendimento: </label>    
+                <input type="number" id="number" min="0" max="10" value="10" required>
+                <fieldset>
+                    <legend>Sobre o serviço </legend>
+                    <label  for="recebido">Foi bem recebido? </label>  
+                    <input type="checkbox" id="recebido" value="sim" checked>
+
+                    <label  for="atendido">Foi rapidamente atendido? </label>  
+                    <input type="checkbox" id="atendido" value="sim" checked>
+
+                    <label  for="servido">Foi rapidamente servido? </label>  
+                    <input type="checkbox" id="servido" value="sim" checked>
+                </fieldset>    
+                <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Your comments">
+                </textarea>
+                <button id="submit" type="submit">Finalizar</button>
+            </form>
+        </main>
+    </body>
+</html>

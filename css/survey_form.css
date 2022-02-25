@@ -1,0 +1,47 @@
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+form{
+    align-self: center;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 95px auto;
+    row-gap: 1vmin;
+}
+
+fieldset{
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-column: 1 / span 2;
+    background-color:white;
+} 
+
+textarea,button{
+    grid-column: 1 / span 2;
+    background-color:white;
+}
+button:hover{
+    background-color: lightblue;
+}
+textarea{
+    resize: none;
+}
+
+h1,p{
+    text-align: center;
+}
+
+body{
+    background: url("../img/background.jpg");
+}
+
+label,legend{
+    font-weight: 800;
+}
+legend{
+    background-color: white;
+}
