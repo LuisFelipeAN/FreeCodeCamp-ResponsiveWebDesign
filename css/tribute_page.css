@@ -15,19 +15,21 @@ h2{
 figcaption{
     text-align: center;
 }
-#fig{
+#img-div{
     background-color: aliceblue;
     margin-right: 20px;
     align-items: center;
     border-radius: 10%;
     box-shadow: 0 10px 10px 10px gray;
 }
-#fig:hover{
+#img-div:hover{
     transform: scale(1.05);
 }
 #image{
+    display: block;
     padding: 10px 10px 5px 5px;
     border-radius: 10%;
+    max-width: 400px;
     
 }
 #info{
