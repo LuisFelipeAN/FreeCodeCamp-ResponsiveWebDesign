@@ -3,6 +3,7 @@
     <head>
         <title>Survey Form</title>        
         <link rel="stylesheet" type="text/css" href="./css/survey_form.css">
+       
     </head>
     <body>
         <h1 id="title"> Formulário Serviço Restaurante</h1>
@@ -11,10 +12,10 @@
         <main>
             <form action="POST" id="survey-form">
                 <label  id="name-label" for="name">Name: </label>    
-                <input type="text" id="name" placeholder="Insira o nome">
+                <input type="text" id="name" placeholder="Insira o nome" required>
 
                 <label  id="email-label" for="email">Email: </label>    
-                <input type="email" name="email" id="email" placeholder="test123@gmail.com">
+                <input type="email" name="email" id="email" placeholder="test123@gmail.com" required>
 
                 <label for="dropdown">Refeição: </label>  
                 <select name="dropdown" id="dropdown">
@@ -35,7 +36,7 @@
                 </fieldset>
 
                 <label  id="number-label" for="number">Atendimento: </label>    
-                <input type="number" id="number" min="0" max="10" value="10" required>
+                <input type="number" id="number" min="0" max="10" placeholder="Nota de 0-10 " required>
                 <fieldset>
                     <legend>Sobre o serviço </legend>
                     <label  for="recebido">Foi bem recebido? </label>  
@@ -52,5 +53,6 @@
                 <button id="submit" type="submit">Finalizar</button>
             </form>
         </main>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" type="text/javascript"></script>
     </body>
 </html>
