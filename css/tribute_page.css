@@ -1,0 +1,49 @@
+body{
+  
+   
+}
+main{
+   display: flex;
+}
+
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+figcaption{
+    text-align: center;
+}
+#fig{
+    background-color: aliceblue;
+    margin-right: 20px;
+    align-items: center;
+    border-radius: 10%;
+    box-shadow: 0 10px 10px 10px gray;
+}
+#fig:hover{
+    transform: scale(1.05);
+}
+#image{
+    padding: 10px 10px 5px 5px;
+    border-radius: 10%;
+    
+}
+#info{
+    flex-grow: 2;
+}
+
+p{
+    text-justify: auto;
+}
+
+
+
+
+
+
+
+User Story #8: The img element should responsively resize, relative to the width of its parent element, without exceeding its original size.
+
+User Story #9: The img element should be centered within its parent element.
