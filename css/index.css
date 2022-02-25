@@ -1,0 +1,49 @@
+body{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.nav{
+    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    text-align: center;
+    top: 0px;
+    background-image:  linear-gradient(white, lightblue);
+    margin-bottom: 5vmin;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: 90%;
+    justify-content: center;
+    text-align: center;
+    row-gap: 2vmin;
+}
+h1{
+    font-size: 7vmin;
+}
+p{
+    font-size: 3vmin;
+}
+
+a{
+    font-size: 5vmin;
+    display: block;
+    box-shadow: 0 0.1vmin 0.1vmin 0.1vmin gray;
+    text-decoration: none;
+}
+a:hover{
+    animation-name: project-selected;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+@keyframes project-selected{
+    100%{
+        transform: scale(1.1);
+        box-shadow: 0 0.5vmin 0.5vmin 0.5vmin gray;
+        background-color: rgba(0, 0, 255, 0.158)
+        
+    }
+}
