@@ -9,7 +9,7 @@ form{
     align-self: center;
     width: 80%;
     display: grid;
-    grid-template-columns: 95px auto;
+    grid-template-columns: 5vmin auto;
     row-gap: 1vmin;
 }
 

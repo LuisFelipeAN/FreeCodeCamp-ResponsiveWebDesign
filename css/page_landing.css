@@ -1,0 +1,138 @@
+header{
+    top:0;
+    left: 0;
+    position: fixed;   
+    width: 100%; 
+    background-image: linear-gradient(white, rgb(185, 185, 185));
+    flex-direction: row;
+    align-items: center;
+    z-index: 2;
+}
+#nav-bar{
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    flex-shrink: 2;
+
+}
+a{
+    display: inline-block;
+    text-align: center;
+    margin: 1vmin 1vmin 1vmin 1vmin;
+    font-size:  4vmin;
+    border-radius: 1%;
+    text-decoration: none; 
+    color: black;
+}
+a:hover{
+    color: white;
+}
+h1{
+   display: inline-block;
+   width: 25%;
+   text-align: left;
+   font-size:  5vmin;
+   margin: 1vmin 1vmin 1vmin 1vmin;
+   flex-shrink: 1;
+ 
+}
+img{
+    width: 4vmin;
+    height: 4vmin;
+    
+}
+main{
+    position: absolute;
+    top: 10vh;
+    background-color: white;
+  
+   
+}
+
+body{
+    display: grid;
+    grid-template-columns: 100%;
+    background-color: white;
+    background-image: linear-gradient( whitesmoke, rgb(185, 185, 185));
+    background-attachment: fixed;
+}
+section{
+    display: grid;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#p-landing{
+    width: 50vw;
+    background-color: rgba(0, 0, 100, 0.1);
+    padding: 1vh 1vw 1vh 1vw;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+    font-size:  3vmin;
+}
+p{
+    font-size:  2vmin;
+}
+iframe{
+    height: 18vw;
+    width: 32vw;
+}
+
+#form{
+    display: grid;
+    grid-template-columns: auto max-content;
+}
+
+.nav-link:hover{
+    animation-name: dow;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+#p-landing:hover,#t-landing:hover,#email:hover,#submit:hover{
+    animation-name: balance;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    
+
+}
+
+@keyframes balance {
+    20%{
+        transform:rotate(-45deg);
+    }
+
+    40%{
+        transform:rotate(45deg);
+    }
+
+    60%{
+        transform:rotate(-20deg);
+    }
+
+    80%{
+        transform:rotate(20deg);
+    }
+
+    100%{
+        transform:rotate(0deg);
+    }
+}
+
+@keyframes dow {
+    50%{
+        transform:rotate(-10deg);
+    }
+    100%{
+        transform:rotate(10deg);
+    }
+}
+
