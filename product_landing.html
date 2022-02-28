@@ -7,63 +7,113 @@
             header{
                 display: flex;
             }
-           
+            @media (max-width: 1600px) {
+                #section2 {
+                    grid-template-columns: 50% 50%;
+                }
+                #section2 h2{
+                    grid-column: 1 /span 2;
+                }
+                
+            }
+            @media (max-width: 1000px) {
+                #section2 {
+                    grid-template-columns: 100%;
+                }
+                #section2 h2{
+                    grid-column: 1;
+                }
+                
+            }
+            @media (max-width: 500px) {
+                iframe{
+                    height: 100px;
+                    width: 250px;
+            }
+            
         </style>
     </head>
     <body>
         <header id="header">
             <img id="header-img" src="https://api.freelogodesign.org/assets/thumb/logo/5072150_400.png" alt="Logo">
-            <h1 id="t-page">Product Landing</h1>
+            <h1 id="t-page">Loja em Casa</h1>
             <nav id="nav-bar"> 
+                <a class="nav-link" href="#section1">Voltar Topo</a>
                 <a class="nav-link" href="#section3">Sobre</a>
-                <a class="nav-link" href="#section2">Contato</a>
-                <a  class="nav-link" href="#section1">Vídeos</a>
+                <a  class="nav-link" href="#section2">Vídeos</a>
             </nav>
         </header>
             <section id="section1">
                 <div id="p-landing">
-                    <h2 id="t-landing">Deixe Seu Contato</h2>
+                    <h2 id="t-landing">Deixe Seu Contato e Veja Nossos Produtos</h2>
                     <form action="https://www.freecodecamp.org/email-submit" id="form">
                         <input id="email" type="email" name="email"  placeholder="Digite Aqui Seu Email" required>
                         <input id="submit" type="submit" value="Enviar">
                     </form>
                 </div>
+                <div class="top">
+                    <img class="product" src="./img/product.png" alt="product">
+                    <img class="product" src="./img/product.png" alt="product">
+                    <img class="product" src="./img/product.png" alt="product">
+                    <img class="product" src="./img/product.png" alt="product">
+                    <img class="product" src="./img/product.png" alt="product">
+                    
+                </div>
+                <div class="left">
+                    <img class="product2" src="./img/product.png" alt="product">
+                </div>
+                <div class="rigth">
+                    <img class="product2" src="./img/product.png" alt="product">
+                </div>
+                <div class="bottom">
+                    <img class="home" src="./img/home.png" alt="house">
+                    <div id="seta"></div>
+                    <div id="main-line"></div>
+                   
+                </div>
+                <div class="bottom-3">
+                    <img id="shop" src="./img/shop.png" alt="house">
+                </div>
+                
+               
             </section>
             <section id="section2">
-                <h2>Videos</h2>
-                <div>
+                <h2>Produtos</h2>
+                <div class="p-video">
                     <iframe id="video" src="https://www.youtube.com/embed/rcGNSWd1qLc" frameborder="0" allowfullscreen ></iframe>
                     <h3>Este é o Título do Video de Numero 1</video></h3>
                 </div>
-                <div>
+                <div class="p-video">
                     <iframe aria-hidden="true" id="video" src="https://www.youtube.com/embed/DnT81hrC5kY" frameborder="0" allowfullscreen></iframe>
                     <h3>Este é o Título do Video de Numero  2</h3>
                 </div>
-                <div>
+                <div class="p-video">
                     <iframe aria-hidden="true" id="video" src="https://www.youtube.com/embed/DnT81hrC5kY" frameborder="0" allowfullscreen></iframe>
                     <h3>Este é o Título do Video de Numero  3</h3>
                 </div>
-                <div>
+                <div class="p-video">
                     <iframe aria-hidden="true" id="video" src="https://www.youtube.com/embed/DnT81hrC5kY" frameborder="0" allowfullscreen></iframe>
                     <h3>Este é o Título do Video de Numero 4</h3>
                 </div>
-                <div>
+                <div class="p-video">
                     <iframe aria-hidden="true" id="video" src="https://www.youtube.com/embed/DnT81hrC5kY" frameborder="0" allowfullscreen></iframe>
                     <h3>Este é o Título do Video de Numero 5</h3>
                 </div>
-                <div>
+                <div class="p-video">
                     <iframe aria-hidden="true" id="video" src="https://www.youtube.com/embed/DnT81hrC5kY" frameborder="0" allowfullscreen></iframe>
                     <h3>Este é o Título do Video de Numero  6</h3>
-                </div>
-                <div>
-                    <iframe aria-hidden="true" id="video" src="https://www.youtube.com/embed/DnT81hrC5kY" frameborder="0" allowfullscreen></iframe>
-                    <h3>Este é o Título do Video de Numero  7</h3>
                 </div>
             </section>
            
             <section id="section3">
                 <h2>Sobre</h2>
-                <p>Este site faz parte de um pequeno projeto requerido pelo FreeCodeCamb, qualquer conteudo disponibilizado no mesmo é apenas para fim de exemplificação</p>
+                <p>Este site faz parte de um pequeno projeto requerido pelo <a href="https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page">FreeCodeCamp</a>, nenhum serviço é desponibilizado pelo mesmo. A prática de HTML e CSS tiveram foco na construção desta página. As imagens inseridas aqui e os vídeos são meramente para fins demonstrativos. Abaixo segue alguns dos conteúdos que foram praticados:</p>
+                <ul>
+                    <li>Displays: Grid, Flex;</li>
+                    <li>Positions: Fixed, Absolute;</li>
+                    <li>Animations.</li>
+                </ul>
+                
             </section>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" type="text/javascript"></script>   
     </body>
