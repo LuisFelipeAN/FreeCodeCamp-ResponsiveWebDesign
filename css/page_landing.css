@@ -132,8 +132,8 @@ body{
     justify-content: center;
 }
 .home{
-    width: 10vw;
-    height: 16vh;
+    width: 15vmin;
+    height: 20vmin;
 }
 #seta {
     position: absolute;
@@ -146,8 +146,8 @@ body{
   }
 
   #shop{
-    width: 10vw;
-    height: 16vh;
+    width: 15vmin;
+    height: 20vmin;
     z-index: 3;
   }
   #main-line{
@@ -155,7 +155,7 @@ body{
     height: 2px;
     background:  #000;
     position: absolute;
-    top: 90%;
+    top: 88.5vh;
     left: 64vw;
     transform: translate(-50%, -50%);
     z-index: 3;
