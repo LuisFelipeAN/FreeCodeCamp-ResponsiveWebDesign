@@ -1,0 +1,69 @@
+:root{
+    --color1: rgb(77, 129, 88);
+    --color2: rgb(99, 170, 114);
+    --color3: rgb(137, 190, 148);
+    --font: 'Staatliches',serif;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-areas: "al ar";
+}
+#navbar{
+    position: fixed;
+    width: 200px;
+    grid-area: al;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: var(--color3,gainsboro);
+}
+.nav-link{
+    display: block;
+    background-color: var(--color2,gainsboro);
+    padding-left: 10px;
+    text-decoration: none; 
+    font-size:  20px;
+}
+.nav-link:hover{
+    transform: translateX(10px);
+}
+#content{
+    grid-area: ar;
+    background-color: gainsboro;
+    border-left: 10px solid var(--color1,gray);
+    display: flex;
+    flex-direction: column;
+}
+
+h2,h1{
+    background-color: var(--color1,gray);
+    flex: 1;
+    margin: 0;
+    padding: 10px 0 10px 10px; 
+    
+}
+p,h2,h1,.nav-link,li{
+    font-family: var(--font,serif);
+}
+
+body{
+    margin: 0 0 0 0;
+}
+section{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+code{
+    border-radius: 10px;
+    padding: 10px;
+    font-family: monospace;
+    background-color: black;
+    color: white;
+    
+    align-self: center;
+    justify-self: center;
+    display: block;
+}
