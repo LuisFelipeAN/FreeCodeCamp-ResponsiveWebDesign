@@ -2,8 +2,8 @@ header{
     top:0;
     left: 0;
     position: fixed;   
-    width: 100%; 
-    background-image: linear-gradient(  hsl(120deg,50%, 60%), hsl(120deg,30%, 30%));
+    width: 100%;
+    background-image: linear-gradient(  white,rgb(182, 179, 179));
     flex-direction: row;
     align-items: center;
     z-index: 20;
@@ -21,6 +21,7 @@ header{
     text-align: center;
     margin: 1vmin 1vmin 1vmin 1vmin;
     font-size:  4vmin;
+    font-weight: bold;
     border-radius: 1%;
     text-decoration: none; 
     color: black;
@@ -68,6 +69,12 @@ body{
 }
 section{
     width: 80vw;
+    background-image: linear-gradient(  hsl(230deg,80%, 70%),hsl(230deg,100%, 100%));
+    border-radius: 5px;
+    border-width: 10%;
+    margin-top: 5vh;
+    box-shadow: 0 1vmin 1vmin 1vmin rgb(51, 70, 49);
+    padding: 2vmin;
 }
 #section2{
     display: flex;
@@ -76,22 +83,20 @@ section{
     justify-content: center;
     flex-direction: column;
 }
-#section3{
-   
-}
+
 .path{
     margin: 25vh 0  0 0vw;
     width: 60vw;
     height: 60vh;
     position: absolute;   
-    z-index: -10;
+    z-index: 1;
     border: 1vmin dotted black;
   
 }
 .arrow{
     transform: translateX(-30vw) translateY(25vh) translateY(-5vmin);
     position: absolute;   
-    z-index: -9;
+    z-index: 4;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -103,7 +108,7 @@ section{
   
     background-color: black;
     animation-name: arrow;
-    animation-duration: 5s;
+    animation-duration: 7s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
   
@@ -135,9 +140,10 @@ section{
     flex-direction: column;
     grid-area: acenter;
     align-items: stretch;
-    background-color: greenyellow;
+    box-shadow: 0 0px 10px 0px rgb(83, 84, 156);
     padding: 10%;
     border-radius: 50%;
+    z-index: 3;
 }
 form{
     display: flex;
@@ -157,18 +163,16 @@ form{
 .stop{
     width: 15vmin;
     height: 15vmin;
-}
-
-.home{
-    width: 12vmin;
-    height: 15vmin;
-}
-
-#shop{
-    width: 15vmin;
-    height: 20vmin;
     z-index: 3;
+    box-shadow: 0 0px 10px 0px rgb(83, 84, 156);
+    background-image: linear-gradient(  hsl(230deg,80%, 70%),
+    hsl(230deg,80%, 80%),
+    hsl(230deg,80%, 90%),
+    hsl(230deg,100%, 100%),
+    hsl(30deg,80%, 90%),
+     hsl(30deg,80%, 40%));
 }
+
 
 .top,.bottom{
     display: flex;
