@@ -1,36 +1,413 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas%20Neue">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arvo">
         <link rel="stylesheet" href="css/technical_documentation.css">
         <style>
-            /* My Technical Documentation page should use at least one media query*/
+             @media (max-width: 500px) {
+                main{
+                    grid-template-columns: 100px auto;
+                }
+                #navbar{
+                    width: 100px;
+                }
+            }
         </style>
     </head>
     <body>
+        <nav id="navbar">
+            <header>Seções</header>
+            <a class="nav-link" href="#Introdução">Introdução</a>
+            <a class="nav-link" href="#Cenário_de_Exemplo">Cenário de Exemplo</a>
+            <a class="nav-link" href="#Padrão_REST">Padrão REST</a>
+            <a class="nav-link" href="#Benefícios_APIs_ASPdotNET">Benefícios APIs ASPdotNET</a>
+            <a class="nav-link" href="#Criar_Uma_API_Web">Criar Uma API Web</a>
+            <a class="nav-link" href="#Compilar_e_Testar_a_API">Compilar e Testar a API</a>
+
+        </nav>
         <main id="main-doc">
-            <nav id="navbar"><!--should be shown on the left side of the screen and should always be visible to the user-->
-                <header id="id_section" class="main-section">
-                    <h1>Options</h1>
-                </header>
-                <a class="nav-link" href="#">Each section</a>
-                <a class="nav-link" href="#">Each section</a>
-                <a class="nav-link" href="#">Each section</a>
-            </nav>
-            
             <div id="content">
-                <section d="id_section" class="main-section">
-                    <h2>Primeira seção</h2>
-                    
+                <section id="Introdução" class="main-section">
+                    <header>
+                        Introdução
+                    </header>
+                    <p>Este módulo explora a criação de um serviço RESTful multiplataforma usando controladores da API Web do ASP.NET Core com .NET e C#.</p>
+
+                    <p>Este módulo usa a CLI (interface de linha de comando) do .NET e o Visual Studio Code para desenvolvimento local. Depois de concluir este módulo, você poderá aplicar seus conceitos usando um ambiente de desenvolvimento como o Visual Studio (Windows) e o Visual Studio para Mac (macOS). Você também pode aplicar os conceitos ao desenvolvimento contínuo por meio do Visual Studio Code (Windows, Linux e macOS).
+                    </p>
+
                 </section>
-                <section d="id_section" class="main-section">
-                    <h2>Segunda seção</h2>
-                    <p>10*p</p>
-                    <code >5*</code>
-                    <li>5*</li>
+                <section id="Cenário_de_Exemplo" class="main-section">
+                    <header>
+                        Cenário de Exemplo
+                    </header>    
+                    <p>ODigamos que você trabalhe para uma empresa chamada Contoso Pizza. Seu gerente pediu que você desenvolvesse um serviço RESTful de gerenciamento de estoque de pizza como pré-requisito para a vitrine Web e o aplicativo móvel da empresa. O serviço precisa dar suporte à adição, exibição, modificação e remoção de tipos de pizza – Um uso padronizado de verbos HTTP mais conhecido como CRUD (criar, ler, atualizar, excluir).</p>
+                    <h2>O que faremos?</h2>
+                    <p>
+                        Neste módulo, você vai criar um novo aplicativo da API Web usando ASP.NET Core e executá-lo e testá-lo na linha de comando. Em seguida, você vai adicionar um armazenamento de dados e um novo controlador de API. Por fim, você vai implementar e testar os métodos de API para criar, ler, atualizar e excluir pizzas do armazenamento de dados.
+                    </p>
+                    <h2>Qual é a meta principal? </h2>
+                    <p>
+                        Ao final desta sessão, você poderá criar novos aplicativos de API Web usando ASP.NET Core. Você também saberá como criar controladores de API que implementam a lógica CRUD básica.
+
+                    </p>
+                    <h2>REST no ASP.NET Core </h2>
+                    <p>
+                        Quando você navega para uma página da Web, o servidor Web se comunica com seu navegador usando HTML, CSS e JavaScript. Se você interagir com a página fazendo algo como enviar um formulário de logon ou selecionar um botão de compra, o navegador enviará as informações de volta ao servidor Web.
+                    </p>
+
+                    <p>
+                        De maneira semelhante, os servidores Web podem se comunicar com uma ampla gama de clientes (navegadores, dispositivos móveis, outros servidores Web e muito mais) usando serviços Web. Clientes de API se comunicam com o servidor por HTTP, e os dois trocam informações usando um formato de dados como JSON ou XML. As APIs são frequentemente usadas em SPAs (aplicativos de página única) que executam a maior parte da lógica da interface do usuário em um navegador da Web. A comunicação com o servidor Web acontece principalmente por meio de APIs Web.
+                    </p>
+                </section>
+                <section id="Padrão_REST" class="main-section">
+                    <header >
+                        Padrão REST
+                </header>
+                    <p>
+                        REST (Transferência de Estado Representacional) é um estilo de arquitetura para a criação de serviços Web. As solicitações REST são feitas por HTTP. Elas usam os mesmos verbos HTTP que os navegadores da Web usam para recuperar páginas da Web e enviar dados para servidores. Os verbos são:
+                    </p>
+
+                    <ul>
+                        <li>
+                            <code> GET</code>: recupere dados do serviço Web.
+
+                        </li>
+                        <li>
+                            <code> POST</code>: crie um novo item de dados no serviço Web.
+                        </li>
+                        <li>
+                            <code>PUT</code>: atualize um item de dados no serviço Web.
+                        </li>
+                        <li>
+                            <code>PATCH</code>: atualize um item de dados no serviço Web, descrevendo um conjunto de instruções sobre como o item deve ser modificado. O aplicativo de exemplo neste módulo não usa esse verbo.
+                        </li>
+                        <li>
+                            <code>DELETE</code>: exclua um item de dados no serviço Web.
+                        </li>
+                    </ul>
+                      <p>APIs de serviço Web que aderem ao REST são chamadas de APIs RESTful. Elas são definidas usando:
+                    </p>
+                   
+                    <ul>
+                        <li>Um URI de base.</li>
+                        <li>métodos HTTP, como  <code>GET</code>,  <code>POST</code>, <code>PUT</code> ,  <code>PATCH</code> ou  <code>DELETE</code>.</li>
+                        <li>Um tipo de mídia para os dados, como JSON (JavaScript Object Notation) ou XML.</li>
+                    </ul>
+
+                    <p>Geralmente, uma API precisa fornecer serviços para algumas coisas diferentes e relacionadas. Por exemplo, nossa API de pizza pode gerenciar pizzas, clientes e pedidos. Usamos roteamento para mapear URIs para divisões lógicas em nosso código, de modo que as solicitações para sejam roteadas para <code>PizzaController</code> . As solicitações para https://localhost:5000/order são roteadas para <code>OrderController</code>.</p>
+                   
+                </section>
+                <section id="Benefícios_APIs_ASPdotNET" class="main-section">
+                    <header>
+                        Benefícios APIs ASPdotNET
+                </header>
+                    <p>
+                        Com o ASP.NET, você pode usar a mesma estrutura e padrões para criar páginas da Web e serviços. Isso significa que você pode reutilizar classes de modelo e lógica de validação e até mesmo atender páginas da Web e serviços lado a lado no mesmo projeto. Essa abordagem tem benefícios:
+                    </p>
+
+                    <ul>
+                        <li><strong>Serialização simples</strong>: o ASP.NET foi projetado para experiências modernas na Web. Os pontos de extremidade serializam automaticamente suas classes para JSON formatado corretamente de maneira pré-configurada. Nenhuma configuração especial é necessária. Obviamente, você pode personalizar a serialização para pontos de extremidade com requisitos exclusivos.</li>
+                        <li><strong>Autenticação e autorização</strong>: para segurança, os pontos de extremidade da API têm suporte integrado para Tokens Web JSON (JWTs) padrão do setor. A autorização baseada em políticas oferece a flexibilidade de definir regras de controle de acesso poderosas no código.</li>
+                        <li><strong>Roteamento ao lado de seu código</strong>: ASP.NET permite definir rotas e verbos em linha com seu código, usando atributos. Os dados do caminho da solicitação, da cadeia de consulta e do corpo da solicitação são associados automaticamente aos parâmetros do método.</li>
+                        <li><strong>HTTPS por padrão</strong>: o HTTPS é uma parte importante das APIs Web modernas e profissionais. Ele se baseia na criptografia de ponta a ponta para fornecer privacidade e ajudar a garantir que as chamadas à API não sejam interceptadas e alteradas entre o cliente e o servidor.</li>
+                    </ul>
+                    <p>O ASP.NET fornece suporte para HTTPS pronto para uso. Ele gera automaticamente um certificado de teste e o importa facilmente para habilitar o HTTPS local. Assim, você executa e depura seus aplicativos com segurança, antes de publicá-los.</p>
+                    <h2>Compartilhar código e conhecimento com aplicativos .NET  </h2>
+                    <p>
+                        Use suas habilidades e o ecossistema do .NET para compartilhar lógica de sua API Web com outros aplicativos criados com .NET, incluindo dispositivos móveis, Web, desktop e serviços.     
+                    </p>
+                    <h2>Testando APIs Web usando o REPL HTTP do .NET </h2>
+                    <p>
+                        Ao desenvolver um site tradicional, você geralmente exibe e testa seu trabalho em um navegador da Web. As APIs da Web aceitam e retornam dados em vez de HTML, de modo que um navegador da Web não é a melhor ferramenta para testes de APIs Web.
+                    </p>
+                    <p>
+                        Uma das opções mais fáceis para explorar e interagir com APIs Web é o REPL HTTP do .NET. REPL significa <i>read-evaluate-print loop</i>. Trata-se de um modo simples e popular de criar ambientes de linha de comando interativos. Na próxima unidade, você criará uma API Web simples e interagirá com ela usando o REPL HTTP do .NET.
+                    </p>
+                
+                    <h2>
+                        Projeto de API Web
+                    </h2>
+                    <p>
+                        Este módulo usa o SDK do .NET 6.0. Verifique se tem o .NET 6.0 instalado, executando o seguinte comando em seu terminal preferido:
+                    </p>
+                    <div class="code">
+                        <div class="code-title">
+                            <h3>CLI do .NET </h3>
+                        </div>
+                        <div class="code-implementation">
+                            <code>dotnet --list-sdks</code>
+                        </div>
+                    </div>
+                    <p>Saída semelhante à seguinte exibida:</p>
+                    <div class="code">
+                        <div class="code-title">
+                            <h3>Console</h3>
+                        </div>
+                        <div class="code-implementation">
+                            <code>3.1.100 [C:\program files\dotnet\sdk]</code>
+                            <code>5.0.100 [C:\program files\dotnet\sdk]</code>
+                            <code>6.0.100 [C:\program files\dotnet\sdk]</code>
+                            
+                        </div>
+                    </div>   
+                    <p>
+                        Verifique se uma versão que começa com <code>6</code> está listada. Se nenhum estiver listado ou o comando não for encontrado, <a href="https://dotnet.microsoft.com/en-us/download" target="_blanck">instale o SDK do .NET 6.0 mais recente</a>.
+                    </p>
+                </section>
+                <section id="Criar_Uma_API_Web" class="main-section">
+                    <header >
+                        Criar Uma API Web
+                    </header>
+                    <p>
+                        Para configurar o projeto do .NET a fim de trabalhar com a API Web, usaremos o Visual Studio Code. O Visual Studio Code inclui um terminal integrado, o que facilita a criação de projetos. Se você não quiser usar um editor de código, poderá executar os comandos deste módulo em um terminal.
+                    </p>
+
+                    <ol>
+                        <li>No Visual Studio Code, escolha <b>ArquivoAbrir Pasta</b>.</li>
+                        <li>Crie uma pasta chamada ContosoPizza no local de sua escolha e clique em <b>Selecionar Pasta</b>.</li>
+                        <li>No Visual Studio Code, abra o terminal integrado selecionando <b>ExibirTerminal</b> no menu principal.                        </li>
+                        <li>Na janela do terminal, copie e cole o seguinte comando:</li>
+                    
+                    <div class="code">
+                        <div class="code-title">
+                            <h3>CLI do .NET</h3>
+                        </div>
+                        <div class="code-implementation">
+                            <code>dotnet new webapi -f net6.0</code>
+                        </div>
+                    </div>
+                    <p>
+                        Esse comando cria os arquivos de um projeto básico de API Web que usa controladores, juntamente com um arquivo de projeto em C# chamado <i>ContosoPizza.csproj</i> que retornará uma lista de previsões meteorológicas. Caso obtenha um erro, verifique se tem instalado o <a href="https://dotnet.microsoft.com/en-us/download" target="_blank"> SDK do .NET 6</a>.
+                    </p>
+                    <div class="important">
+                        <p><strong>Importante</strong></p>
+                        <p>
+                            Os projetos de API Web são protegidos com https por padrão. Se você tiver problemas, 
+                            <a href="https://docs.microsoft.com/pt-BR/aspnet/core/security/enforcing-ssl?view=aspnetcore-6.0&tabs=visual-studio#trust-the-aspnet-core-https-development-certificate-on-windows-and-macos" target="_blank">configure o certificado de desenvolvimento HTTPS do ASP.NET Core</a>.
+                        </p>
+                    </div>
+                    <p>Você poderá receber um prompt do Visual Studio Code para adicionar ativos para depurar o projeto. Selecione Sim na caixa de diálogo.</p>
+                    <p>
+                        O comando usa um modelo de projeto ASP.NET Core, com o alias webapi, para gerar o scaffolding de um projeto de API Web baseado em C#. Um diretório ContosoPizza é criado. Esse diretório contém um projeto ASP.NET Core em execução no .NET. O nome do projeto corresponde ao nome do diretório <i>ContosoPizza</i>.
+                    </p>
+                    <p>Agora, você deve ter acesso aos estes arquivos:</p>
+                    <div class="code">
+                        <div class="code-title">
+                            <h3>Bash</h3>
+                        </div>
+                        <div class="code-implementation">
+                            <code>-| Controllers</code>
+                            <code>-| obj</code>
+                            <code>-| Properties</code>
+                            <code>-| appsettings.Development.json</code>
+                            <code>-| appsettings.json</code>
+                            <code>-| ContosoPizza.csproj</code>
+                            <code>-| Program.cs</code>
+                            <code>-| WeatherForecast.cs</code>
+                        </div>
+                    </div>
+
+                    <li>Examine os seguintes arquivos e diretórios:</li>
+                    <table>
+                        <thead>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i>Controllers/</i></td>
+                                <td>Contém classes com métodos públicos expostos como pontos de extremidade HTTP</td>
+                            </tr>
+                            <tr>
+                                <td><i>Program.cs</i></td>
+                                <td>Configura serviços e o pipeline de solicitação HTTP do aplicativo e contém o ponto de entrada gerenciado do aplicativo</td>
+                            </tr>
+                            <tr>
+                                <td><i>ContosoPizza.csproj</i></td>
+                                <td>Contém metadados de configuração para o projeto</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </ol>
+                </section>
+                <section id="Compilar_e_Testar_a_API" class="main-section">
+                    <header>
+                    Compilar e Testar a API
+                    </header>
+                    <ol>
+                        <li>Execute o seguinte comando da CLI do .NET Core no shell de comando:</li>
+                        <div class="code">
+                            <div class="code-title">
+                                <h3>CLI do .NET</h3>
+                            </div>
+                            <div class="code-implementation">
+                                <code>dotnet run</code>
+                            </div>
+                        </div>
+                        <p>O comando anterior:</p>
+                        <ul>
+                            <li>Localiza o arquivo de projeto no diretório atual.</li>
+                            <li>Recupera e instala as dependências de projeto necessárias para este projeto</li>
+                            <li>Compila o código do projeto.</li>
+                            <li>Hospeda a API Web com o servidor Web Kestrel do ASP.NET Core em um ponto de extremidade HTTP e HTTPS.</li>
+                        </ul>
+                        <p>Quando o projeto for criado, uma porta de 5000 a 5300 será selecionada para HTTP e de 7000 a 7300 para HTTPS. As portas que você usou durante o desenvolvimento podem ser facilmente alteradas com a edição do arquivo <i>launchSettings.json</i> do projeto. Esse módulo usa a URL segura <code>localhost</code> que começa com <code>https</code>.</p>
+
+                        <p>Uma variação da seguinte saída aparece para indicar que seu aplicativo está em execução:</p>
+                        <div class="code">
+                            <div class="code-title">
+                                <h3>Console</h3>
+                            </div>
+                            <div class="code-implementation">
+                                <code>Building...</code>
+                                <code>info: Microsoft.Hosting.Lifetime[14]</code>
+                                <code>Now listening on: https://localhost:7294</code>
+                                <code>info: Microsoft.Hosting.Lifetime[14]</code>
+                                <code> Now listening on: http://localhost:5118 </code>
+                                <code>info: Microsoft.Hosting.Lifetime[0]</code>
+                                <code>Application started. Press Ctrl+C to shut down.</code>
+                                <code>info: Microsoft.Hosting.Lifetime[0]</code>
+                                <code> Hosting environment: Development </code>    
+                            </div>
+                        </div>
+                        <p>Se estiver executando esse aplicativo em seu próprio computador, você poderá direcionar um navegador para o link HTTPS exibido na saída (no caso anterior, <code>https://localhost:7294</code>) para exibir a página resultante. Lembre-se dessa porta, pois você a usará em todo o módulo em que <code>{PORT}</code> for usado.</p>
+                        <div class="important">
+                            <p><strong>Importante</strong></p>
+                            <p>Verifique a saída do terminal se você encontrar algum comportamento inesperado. Se o build falhar ou se ocorrerem outros erros, as informações do arquivo de log ajudarão a solucionar os problemas. Ao fazer alterações no código, você precisará interromper a API Web selecionando Ctrl+C no teclado e executando o comando <code>dotnet run </code>novamente.</p>
+                        </div>
+
+                        <li>
+                            Abra um navegador da Web e acesse:
+                        </li>
+                        <div class="code">
+                            <div class="code-title">
+                                <h3>Bash</h3>
+                            </div>
+                            <div class="code-implementation">
+                                <code>https://localhost:{PORT}/weatherforecast</code>
+                            </div>
+                        </div>
+                        <p>A seguinte saída representa um trecho do JSON retornado:</p>
+                        <div class="code">
+                            <div class="code-title">
+                                <h3>JSON</h3>
+                            </div>
+                            <div class="code-implementation">
+                                <code>[</code>
+                                <code>    {</code>
+                                <code>        "date": "2021-11-09T20:36:01.4678814+00:00",</code>
+                                <code>        "temperatureC": 33,</code>
+                                <code>        "temperatureF": 91,</code>
+                                <code>        "summary": "Scorching"</code>
+                                <code>    },</code>
+                                <code>    {</code>
+                                <code>        "date": "2021-11-09T20:36:01.4682337+00:00",</code>
+                                <code>        "temperatureC": -8,</code>
+                                <code>        "temperatureF": 18,</code>
+                                <code>        "summary": "Cool"</code>
+                                <code>    },</code>
+                                <code>    // ...</code>
+                                <code>]</code>
+                            </div>
+                        </div>
+
+                        <li>Abra um novo terminal integrado do Visual Studio Code selecionando <b>TerminalNovo Terminal</b> no menu principal. Em seguida, execute o seguinte comando:</li>
+                        <div class="code">
+                            <div class="code-title">
+                                <h3>CLI do .NET</h3>
+                            </div>
+                            <div class="code-implementation">
+                                <code>dotnet tool install -g Microsoft.dotnet-httprepl</code>
+                            </div>
+                        </div>
+                        <p>O comando anterior instala a ferramenta de linha de comando REPL HTTP do .NET que será usada para fazer solicitações HTTP para a API Web.</p>
+                        <li>Conecte-se à API Web executando o seguinte comando:</li>
+                        <div class="code">
+                            <div class="code-title">
+                                <h3>CLI do .NET</h3>
+                            </div>
+                            <div class="code-implementation">
+                                <code>httprepl https://localhost:{PORT}</code>
+                            </div>
+                        </div>
+                            <p>Outra opção é executar o seguinte comando a qualquer momento enquanto <code>HttpRepl</code> estiver em execução:     </p>
+                        <div class="code">
+                            <div class="code-title">
+                                <h3>CLI do .NET</h3>
+                            </div>
+                            <div class="code-implementation">
+                                <code>(Disconnected)> connect https://localhost:{PORT}</code>
+                            </div>
+                        </div>
+                        <li>Explore os pontos de extremidade disponíveis executando o comando <code>ls</code>.O comando anterior detecta todas as APIs disponíveis no ponto de extremidade conectado. Ele deve exibir o seguinte:</li>
+                        <div class="code">
+                            <div class="code-title">
+                                <h3>CLI do .NET</h3>
+                            </div>
+                            <div class="code-implementation">
+                                <code>https://localhost:{PORT}/> ls</code>
+                                <code>.                 []</code>
+                                <code>WeatherForecast   [GET] </code>
+                            </div>
+                        </div>
+
+                         <li>Vá até o ponto de extremidade <code>WeatherForecast</code> executando o comando <code>cd</code>. O comando anterior mostra uma saída das APIs disponíveis para o ponto de extremidade <code>WeatherForecast</code>:</li>
+                         <div class="code">
+                            <div class="code-title">
+                                <h3>CLI do .NET</h3>
+                            </div>
+                            <div class="code-implementation">
+                                <code>https://localhost:{PORT}/> cd WeatherForecast</code>
+                                <code>/WeatherForecast    [GET]</code>
+                            </div>
+                        </div>
+                        <li>Faça uma solicitação <code>GET</code> no <code>HttpRepl</code> usando o comando <code>get</code>. O comando anterior faz uma solicitação <code>GET</code> semelhante a ir para o ponto de extremidade no navegador:</li>
+                        <div class="code">
+                            <div class="code-title">
+                                <h3>CLI do dotNET</h3>
+                            </div>
+                            <div class="code-implementation">
+                                <code>HTTP/1.1 200 OK</code>
+                                <code>Content-Type: application/json; charset=utf-8</code>
+                                <code>Date: Fri, 02 Apr 2021 17:31:43 GMT</code>
+                                <code>Server: Kestrel</code>
+                                <code>Transfer-Encoding: chunked</code>
+                                <code>[</code>
+                                <code> {</code>
+                                <code>    "date": 4/3/2021 10:31:44 AM,</code>
+                                <code>    "temperatureC": 13,</code>
+                                <code>    "temperatureF": 55,</code>
+                                <code>    "summary": "Sweltering"</code>
+                                <code> },</code>
+                                <code> {</code>
+                                <code>    "date": 4/4/2021 10:31:44 AM,</code>
+                                <code>    "temperatureC": -13,</code>
+                                <code>    "temperatureF": 9,</code>
+                                <code>    "summary": "Warm"</code>
+                                <code> },</code>
+                                <code> // ..</code>
+                                <code>]</code>
+                            </div>
+                        </div>
+
+                        <li>Saia da sessão <code>HttpRepl</code> atual usando o seguinte comando:</li>
+                        <div class="code">
+                            <div class="code-title">
+                                <h3>CLI do .NET</h3>
+                            </div>
+                            <div class="code-implementation">
+                                <code>exit</code>
+                            </div>
+                        </div>
+                        <li>Retorne ao terminal <code>dotnet</code> na lista suspensa no Visual Studio Code. Desligue a API Web selecionando Ctrl+C no teclado.</li>
+                    </ol>
+                    <p>Agora que você criou a API Web, você a modificará para atender às necessidades da <a href="https://docs.microsoft.com/pt-br/learn/modules/build-web-api-aspnet-core/4-aspnet-controllers" target="_blank" >API Web de pizza</a>.
+                    </p>
                 </section>
             </div>
         </main>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" type="text/javascript"></script>   
     </body>
     
 </html>

@@ -1,51 +1,67 @@
 :root{
-    --color1: rgb(77, 129, 88);
-    --color2: rgb(99, 170, 114);
-    --color3: rgb(137, 190, 148);
-    --font: 'Staatliches',serif;
+    --color1: rgb(77, 110, 129);
+    --color2: rgb(99, 138, 170);
+    --color3: rgb(137, 158, 190);
+    --font: 'Arvo',serif;
+}
+header{
+    font-size: 2em;
+    font-weight: bold;
 }
 
 main{
     display: grid;
-    grid-template-columns: 200px auto;
+    grid-template-columns: 250px auto;
     grid-template-areas: "al ar";
 }
 #navbar{
+    padding-right: 5px;
     position: fixed;
-    width: 200px;
+    width: 250px;
     grid-area: al;
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: var(--color3,gainsboro);
+    background-color: var(--color1,gainsboro);
+    overflow-y: auto;
+    max-height: 100vh;
 }
 .nav-link{
     display: block;
-    background-color: var(--color2,gainsboro);
     padding-left: 10px;
     text-decoration: none; 
     font-size:  20px;
+    color: white;
+    background-color: var(--color3,gainsboro);;
 }
 .nav-link:hover{
-    transform: translateX(10px);
+    font-weight: bold;
+    background-color: var(--color1,gray);;
 }
 #content{
     grid-area: ar;
-    background-color: gainsboro;
+    background-color: white;
     border-left: 10px solid var(--color1,gray);
     display: flex;
     flex-direction: column;
 }
 
-h2,h1{
+header{
     background-color: var(--color1,gray);
     flex: 1;
     margin: 0;
     padding: 10px 0 10px 10px; 
+    color: white;
     
 }
-p,h2,h1,.nav-link,li{
+#navbar header{
+    flex: 0;
+}
+p,h2,h1,header,.nav-link,li{
     font-family: var(--font,serif);
+    padding: 5px;
+    margin: 5px 0 0 0;
+
 }
 
 body{
@@ -56,14 +72,55 @@ section{
     display: flex;
     flex-direction: column;
 }
-code{
-    border-radius: 10px;
-    padding: 10px;
+.code{
     font-family: monospace;
-    background-color: black;
-    color: white;
-    
+    background-color:  rgb(192, 192, 192);
+    width: 60vw;
     align-self: center;
-    justify-self: center;
-    display: block;
+    display: flex;
+    flex-direction: column;
+}
+.important{
+    background-color:  #d7eaf8;
+    width: 60vw;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+code{
+    background-color: gainsboro;
+}
+.code h3{
+    margin: 0;
+    padding: 5px;
+}
+.code code{
+    padding: 2px 5px 0 5px;
+}
+.code-title{
+    background-color:  rgb(192, 192, 192);
+    margin: 0;
+}
+.code-implementation{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 5px;    
+}
+.code-implementation code{
+    flex: 1;
+    white-space: pre;
+}
+
+th{
+    font-weight: bold;
+}
+table{
+    width: 60vw;
+    border: 2px solid rgb(192, 192, 192);
+    background-color: gainsboro;
+}
+tr{
+    background-color: white;
 }
