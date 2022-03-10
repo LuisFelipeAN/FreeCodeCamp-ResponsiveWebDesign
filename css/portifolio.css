@@ -1,0 +1,174 @@
+
+#welcome-section{
+    height: 100vh;
+    grid-area: welcome;
+    background-color: blueviolet;
+    
+}
+h1{
+    font-size: 1.5em ;
+}
+h2{
+    font-size: 1.25em;
+}
+
+main{
+    padding-top: 75px;
+    display: grid;
+    grid-template-columns: 15vw auto 20vw;
+    gap: 1vmin;
+    grid-template-areas:  "menu welcome others"
+                          "menu content content"
+}
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#navbar{
+    top: 0;
+    left: 0;
+    height: 75px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(  white,rgb(182, 179, 179));
+}
+#navbar h1{
+    display: inline;
+}
+.nav-link{
+    padding: 2px;
+    text-decoration: none;
+    color: black;
+}
+
+#links{
+    display: flex;
+    flex: 1;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    padding: 10px;
+}
+#picture{
+    padding: 5px;
+    height: 12vw;
+    width: 12vw;
+    border-radius: 50%;
+}
+#slot-img{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background-color: gray;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    align-self: center;
+}
+#menu{
+    position: fixed;
+    width: 15vw;
+    overflow-y: auto;
+    max-height: 100vh;
+    background-color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: stretch;
+    
+}
+#menu a{
+    background-color: rgb(255, 0, 0);
+    background-color: gray; 
+    
+}
+#menu a:hover{
+    background-color: gainsboro;
+}
+#content{
+    grid-area: content;
+    background-color: rgb(229, 255, 0);
+}
+
+#others{
+    height: 100vh;
+    grid-area: others;
+    background-color: rgb(0, 255, 21);
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: stretch;
+
+}
+#brief{
+    background-color: gainsboro;
+}
+
+#projects{
+    padding: 1vmin;
+    grid-area: content;
+    display: grid;
+    grid-template-columns: repeat(5,16vw);
+    grid-template-rows: repeat(5,10vw);;
+    justify-content: stretch;
+    gap: 1vmin;
+}
+
+.project-tile{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: aquamarine;
+    box-shadow: 0 0px 10px 0px rgb(167, 167, 168);
+   
+}
+main h1,main h2,main h3{
+    margin-top: 0;
+    background-image:  linear-gradient(  white,rgb(182, 179, 179));
+}
+body{
+   background-color:  rgb(182, 179, 179);
+ 
+}
+
+#others h1,#others h2{
+    margin-bottom: 0;
+}
+#others h2{
+    text-align: center;
+}
+.skills{
+    background-color: gainsboro;
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: max-content auto;
+    justify-content: stretch;
+    gap: 1vmin;
+}
+.skills p{
+    display: inline-block;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.star{
+    height: 1.5vmin;
+    width: 1.5vmin;
+
+    
+}
+
+.star:hover{
+    animation-name: up;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-duration: 0.5s;
+}
+
+@keyframes up {
+    50%{
+        transform: translateY(-0.5vmin);
+    }
+}
