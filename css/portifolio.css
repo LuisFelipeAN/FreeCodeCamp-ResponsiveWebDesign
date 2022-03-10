@@ -89,7 +89,7 @@ body{
 }
 #content{
     grid-area: content;
-    background-color: rgb(229, 255, 0);
+    background-color: white;
 }
 
 #others{
@@ -111,17 +111,23 @@ body{
     grid-area: content;
     display: grid;
     grid-template-columns: repeat(5,16vw);
-    grid-template-rows: repeat(5,10vw);;
+    grid-template-rows: repeat(2,10vw);;
     justify-content: stretch;
     gap: 1vmin;
 }
 
 .project-tile{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: stretch;
     padding: 5px;
     border-radius: 10px;
-    background-color: aquamarine;
+    background-color: gainsboro;
     box-shadow: 0 0px 10px 0px rgb(167, 167, 168);
-   
+    text-decoration: none;
+    color: black;
+    position: relative;
 }
 main h1,main h2,main h3{
     margin-top: 0;
@@ -132,19 +138,22 @@ body{
  
 }
 
-#others h1,#others h2{
+#others h1, h2{
     margin-bottom: 0;
+}
+h2{
+    margin-top: 10px;
 }
 #others h2{
     text-align: center;
 }
 .skills{
     background-color: gainsboro;
-    padding-left: 20px;
     display: grid;
     grid-template-columns: max-content auto;
     justify-content: stretch;
     gap: 1vmin;
+    padding: 10px;
 }
 .skills p{
     display: inline-block;
@@ -167,8 +176,49 @@ body{
     animation-duration: 0.5s;
 }
 
+.project-tile:hover{
+    z-index: 2;
+    animation-name: grow;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-duration: 0.3s;
+}
+.project-tile h4{
+    margin: 0;
+}
+.project-tile img{
+    border-radius: 5px;
+    flex: 1;
+}
 @keyframes up {
     50%{
         transform: translateY(-0.5vmin);
     }
+}
+
+@keyframes grow {
+    100%{
+        transform: translateX(-8vw)  scale(2);
+        box-shadow: 0 0px 20px 0px rgb(167, 167, 168);
+
+    }
+}
+
+.project-tile .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    text-align: justify;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    position: absolute;
+    top: 10vw;
+    width: 15.5vw;
+    z-index: 1;
+}
+
+.project-tile:hover .tooltiptext {
+    visibility: visible;
 }
