@@ -3,7 +3,7 @@
     <head>
         <title>Luis Felipe</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/portifolio.css">
         <style>
              @media (max-width: 1750px) {
@@ -22,6 +22,7 @@
                 }
                 #welcome-section{
                     grid-row:1/ span 2;
+                    height: auto;
                 }
                 #projects{
                     grid-template-columns: repeat(2,auto);
@@ -36,6 +37,13 @@
                 main{
                     grid-template-columns: auto;
                 }
+                #navbar{
+                    flex-direction: column;
+                }
+                #links{
+                    flex-direction: column;
+                }
+                
             }
 
             @media (max-width: 370px) {
@@ -43,15 +51,31 @@
                     width: 90vmin;
                     height: 67.5vmin;
                 }
+                @keyframes drop {
+                    100%{
+                        transform:  translateY(68.3vmin);
+                        box-shadow: 0 0px 20px 0px rgb(167, 167, 168);
+
+                    }
+                }
+
+                .project-tile .tooltiptext {
+                    width: 80vmin;
+                }
+               
             }
+           
         </style>
     </head>
     <body>
         <nav id="navbar">
             <h1>Luis Felipe de Almeida Nascimento</h1>
             <div id="links">
-                <a class="nav-link" href="#welcome-section">Welcome</a>
-                <a class="nav-link" href="#welcome-section">Welcome</a>
+                <a class="nav-link" href="#certificates">Certificados</a>
+                <a class="nav-link" href="#formation">Formação</a>
+                <a class="nav-link" href="#experience">Experiência</a>
+                <a class="nav-link" href="#projects">Projetos</a>
+                <a class="nav-link" href="#welcome-section">Resumo</a>
             </div>
         </nav>
         <main>
@@ -59,20 +83,51 @@
                 <div id="slot-img">
                 <img id="picture" src="https://scontent.frao1-1.fna.fbcdn.net/v/t39.30808-1/230598939_4407758769284036_4490393920824352358_n.jpg?stp=dst-jpg_s200x200&_nc_cat=106&ccb=1-5&_nc_sid=7206a8&_nc_eui2=AeFoe5rianVl365RkvCR4Zp2jQ5xKwDLBLmNDnErAMsEudVhceYl7AZYQV_WnTh9TacO8ja5hDC6QqWvSos8oPb3&_nc_ohc=8ALnvGAnTyUAX_xxrX7&tn=gzTD96_nF1WQAfw8&_nc_ht=scontent.frao1-1.fna&oh=00_AT-CMG8H7WL9Byt2r3IRlM_nRc1wWT3jNpU07su8IQmJeg&oe=622DDBE5" alt="Perfil Image">
                  </div>
-                 <div id="brief">
-                     <p>
-                        Desenvolvedor Web Full-Stack Junior 
-
-                     </p>
+                 <div class="menu-text" id="aim">
+                    <b>Desenvolvedor Web Full-Stack</b>
                  </div>
-                <a href="#welcome-section">Welcome</a>
+                 <div class="menu-text">
+                    Olá, bem vindo ao meu portifolio. Espero que goste do que encontrar, e se tiver interesse sinta-se livre entrar em contato por qualquer um dos meios abaixo.
+                 </div>
+                 <div class="menu-text" id="contatct">
+                     <div class="info">
+                        <b>Cel</b>: (32) 98407-3003
+                     </div>
+                     <div class="info">
+                        <b>Estado</b>: Minas Gerais
+                     </div>
+                     <div class="info">
+                        <b>Cidade</b> Juiz de Fora
+                     </div>
+                 </div>
+                 <div class="menu-text" id="social">
+                     <a id="profile-link" href="https://github.com/LuisFelipeAN" target="_blank"> <img src="https://raw.githubusercontent.com/jmnote/z-icons/master/svg/github.svg" alt="GitHub Profile" ></a>
+                     <a href="mailto:luis.felipe.almeida.nascimento@gmail.com" target="_blank"> <img src="	https://raw.githubusercontent.com/jmnote/z-icons/master/svg/google.svg" alt="Luis Felipe Email" ></a>
+                     <a href="https://www.linkedin.com/in/luis-felipe-almeida-nascimento-73b029223" target="_blank"> <img src="./img/linkedin.png" alt="Luis Felipe Linkedin" ></a>
+
+
+                     
+                 </div>
+                 <div class="menu-text">
+                    <b>Breve Introdução</b>: Sou uma pessoa bem criativa, tenho uma visão ampla e sempre busco olhar e considerar diferentes pontos para encontrar uma solução.
+                 </div>
+                 <div class="menu-text" id="hobbies">
+                    <b>Hobbies</b> leitura nas horas vagas, desenhar e me apronfundar em alguma notícia ou curiosidade no dia a dia.
+                 </div>
+
             </div>
             <section id="welcome-section">
-                <h1>Desenvolvedor Web Full-Stack Junior</h1>
+                <h1>Resumo</h1>
+                <p>Engeheiro de softwarem, programador back-end e front-end a procura da primeira oportunidade no mercado de trabalho. Na área acadêmica (Graduação e Mestrado) cursei diversas disciplinas que me introduziram a diversas tecnologias. Algumas delas sendo Java, JavaScript, C/C++, C#, NodeJS, Linux, Python,  Git, NoSQL, Maven.</p>
+               
+                <p>Durante o processo de desenvolvimento gosto de seguir padrões e boas práticas com o intuito de produzir uma solução eficiente, facilmente compreensível e reutilizavel.</p>
+
+                <p>Atualmente possuo uma familiariade maior com a linguagem Java devido ao tempo que passei desenvolvendo meus trabalhos de TCC e dissertação. Sua aplicação teve foco no desenvolvimento de aplicações e extensões do Eclipse. Entretanto estou aprimorando ainda mais as minhas habilidades nas demais tecnologias. O meu foco atual é no desenvolvimento Web.</p> 
+                    
+                <p>Em paralelo a isso estou desenvolvendo uma extensão do Eclipse para a instanciação automática de padrões de casos de segurança compatíveis com a notação SACM utilizando os frameworks Eclipse EMF e Epsilon.</p>
             </section>
             <div id="others">
                 <h1>Competências</h1>
-                <p>Abaixo segue uma lista das principais competências</p>
                 <h2>Linguagens</h2>
                 <div class="skills">
                     <p>Java</p>
@@ -140,7 +195,7 @@
                         <p>NodeJS</p>
                         <div class="level">
                             <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
+                            <img class="star" src="img/star.png" alt="">
                             <img class="star" src="img/star2.png" alt="">
                             <img class="star" src="img/star2.png" alt="">
                             <img class="star" src="img/star2.png" alt="">
@@ -169,8 +224,24 @@
                             <img class="star" src="img/star2.png" alt="">
                             <img class="star" src="img/star2.png" alt="">
                         </div>
+                        <p>EMF e GMF</p>
+                        <div class="level">
+                            <img class="star" src="img/star.png" alt="">
+                            <img class="star" src="img/star.png" alt="">
+                            <img class="star" src="img/star.png" alt="">
+                            <img class="star" src="img/star.png" alt="">
+                            <img class="star" src="img/star2.png" alt="">
+                        </div>
                     </div>
-                <h2>Conceitos</h2>
+                <h2>Outros</h2>
+                    <div class="skills" style="grid-template-columns: max-content;">
+                        <p>Inglês</p>
+                        <p>Padrões de Design</p>
+                        <p>Resolução de problemas</p>
+                        <p>Capacidade analítica</p>
+                        <p>Comunicação</p>
+                        <p>Empatia</p>
+                    </div>
             </div>
             
         </main>
@@ -179,28 +250,28 @@
                 <section id="projects">
                    
                     <a href="tribute_page.html" target="_blank" class="project-tile">
-                        <span class="tooltiptext">Página construida utilizando HTML e CSS como parte dos projetos requeridos pelo FreeCodeCamp</span>
+                        <span class="tooltiptext">Página construida utilizando HTML e CSS como parte dos projetos requeridos pelo FreeCodeCamp.</span>
                         <img src="./img/project-tribute-page.png" alt="Imagem da Página de Homenagem ao Homen de Ferro">
                         <h4>  Página de Homenagem ao Homen de Ferro</h4>    
                     </a>
                     <a  href="survey_form.html" target="_blank" class="project-tile">
-                        <span class="tooltiptext">Página cnstruida utilizando HTML e CSS como parte dos projetos requeridos pelo FreeCodeCamp</span>
+                        <span class="tooltiptext">Página cnstruida utilizando HTML e CSS como parte dos projetos requeridos pelo FreeCodeCamp.</span>
                         <img src="./img/project-surveyform.png" alt="Imagem do Formulário de Satisfação do Cliente">
                         <h4> Formulário Satisfação do Cliente</h4>    
                     </a>
                     <a href="product_landing.html" target="_blank" class="project-tile">
-                        <span class="tooltiptext">Página construida utilizando HTML e CSS como parte dos projetos requeridos pelo FreeCodeCamp</span>
+                        <span class="tooltiptext">Página construida utilizando HTML e CSS como parte dos projetos requeridos pelo FreeCodeCamp.</span>
                         <img src="./img/project-productlanding.png" alt="Imagem da Página com a Idéia">
                         <h4>Pitch de Uma Idéia de Produto</h4>    
                     </a>
                     <a href="portifolio.html" target="_blank" class="project-tile">
-                        <span class="tooltiptext">Página de portifólio contendos os projetos, habilidades e apresentação</span>
+                        <span class="tooltiptext">Página de portifólio contendos os projetos, habilidades e apresentação.</span>
                         <img src="./img/project-portifolio.png" alt="Imagem do Portifolio ">
                         <h4>  Portifolio</h4>    
                     </a>
 
                     <a href=" https://github.com/LuisFelipeAN/ETBalls" target="_blank" class="project-tile">
-                        <span class="tooltiptext">Jogo desenvolvido em C# na Unity3D como parte dos trabalhos da disciplina de desenvolvimento de jogos (2018)</span>
+                        <span class="tooltiptext">Jogo desenvolvido em C# na Unity3D como parte dos trabalhos da disciplina de desenvolvimento de jogos (2018).</span>
                         <img src="./img/et-balls.png" alt="Imagem Jogo ET-Balls">
                         <h4>ET-Balls</h4>    
                     </a>
@@ -225,28 +296,38 @@
                 <section id="experience">
                     <h1>Experiência</h1>
                     <ul>
-                        <li>Unvarsidade Federal de Juiz de Fora</li>
+                        <li >Universidade Federal de Juiz de Fora</li>
                         <ul>
                             <li>Tutor na Disciplina de Algoritmos | novembro de 2021 a fevereiro 2022 (4 meses)</li>
                             <p>Auxílio na elaboração de exercícios.</p>
                             <li>Bolsista de Iniciação Científica | agosto de 2019 a julho de 2020 (1 ano)</li>
                             <p>Gerenciamento de variabilidades no processo de engenharia de segurança e
                                 de proteção de sistemas críticos. Extensão das ferramentas OSATE-AADL e HiPHOPS.</p>
+                                <iframe id="video" src="https://www.youtube.com/embed/DnT81hrC5kY" frameborder="0" allowfullscreen ></iframe>
                             <li>Bolsista de Iniciação Científica | agosto de 2018 a julho de 2019 (1 ano)
                             </li>
                             <p>Desenvolvimento e integração de ferramentas dirigidas a modelos para apoiar a engenharia e a certificação de sistemas críticos.</p>
+                            <iframe id="video" src="https://www.youtube.com/embed/rcGNSWd1qLc" frameborder="0" allowfullscreen ></iframe>
                         </ul>
                     </ul>
                 </section>
                 <section id="formation">
                     <h1>Formação</h1>
                     <ul>
-                        <li>Unvarsidade Federal de Juiz de Fora</li>
+                        <li>Universidade Federal de Juiz de Fora</li>
                         <ul>
-                            <li>Bacharel em Ciências da Computação | 2014 - 2019</li>
-                            <li>Mestre em Ciências da Computação | 2021 - Em Curso</li>
+                            <li>Bacharel em Ciências da Computação | 2014 - 2019;</li>
+                            <p>Título do TCC: "SACM Editor: an OMG standard compliant model-based tool
+                                for specification of Assurance Cases for Safety-Critical Systems".</p>
+                            <li>Mestrado em Ciências da Computação | 2021 - Em Curso.</li>
                         </ul>
-                      
+                    </ul>
+                </section>
+                <section id="certificates">
+                    <h1>Certificados</h1>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/learning/certificates/2fac90312eca000ed89e0304513c4dc979ac1b78df25884471cd05715410d28a">Learning Spring with Spring Boot (2019)</a></li>
+                        <li><a href="https://efset.org/cert/vY4u5Q">EF SET English Certificate 72/100 (C2 Proficient)</a></li>
                     </ul>
                 </section>
             </div>

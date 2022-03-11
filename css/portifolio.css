@@ -1,42 +1,59 @@
+
 body{
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    text-justify: auto;
 }
 #welcome-section{
-   background-color: blueviolet;
+   background-color: white;
    height: 100vh;
-    
+   display: flex;
+   flex-direction: column;
+   align-items: stretch;
 }
+
 h1{
-    font-size: 1.5em ;
+    font-size: 2em ;
 }
-h2{
-    font-size: 1.25em;
+h2,li{
+    font-size: 1.5em;
 }
 
 main{
     display: grid;
-    grid-template-columns: auto 6fr 2fr;
+    grid-template-columns: 290px auto max-content;
     gap: 1vmin;
 }
 body{
     margin: 0;
-    font-family: 'Bree Serif', 'Times New Roman', Times, serif;
+    font-family: 'Open Sans', 'Times New Roman', Times, serif;
 }
 
 #navbar{
     top: 0;
     left: 0;
     position: sticky;
-    width: 100%;
     display: flex;
     align-items: center;
     z-index: 5;
     background-image: linear-gradient(  white,rgb(182, 179, 179));
+    padding: 10px;
 }
 #navbar h1{
     display: inline;
+}
+#navbar a{
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    background-image: linear-gradient(  white,rgb(182, 179, 179));
+    font-size: large;
+    font-weight: bold;
+}
+#navbar a:hover{
+    background-color: white;
+    background-image:none;
 }
 .nav-link{
     padding: 2px;
@@ -48,7 +65,7 @@ body{
     display: flex;
     flex: 1;
     flex-direction: row-reverse;
-    align-items: flex-start;
+    align-items: flex-end;
     padding: 10px;
 }
 #picture{
@@ -78,10 +95,30 @@ body{
     align-items: stretch;
     
 }
-#menu a{
-    background-color: rgb(255, 0, 0);
-    background-color: gray; 
-    
+
+.menu-text{
+    background-color: gainsboro;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 2px solid gray;
+}
+.menu-text img{
+    height: 32px;
+    width: 32px;
+    margin: 0 3px 0 3px;
+}
+.menu-text a{
+    display: inline-block;
+}
+#social{
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.info{
+    margin-bottom: 3px;
 }
 #menu a:hover{
     background-color: gainsboro;
@@ -98,9 +135,7 @@ body{
     align-items: stretch;
 
 }
-#brief{
-    background-color: gainsboro;
-}
+
 
 #projects{
     padding: 20px;
@@ -129,6 +164,17 @@ body{
 h1, h2, h3{
     margin-top: 0;
     background-image:  linear-gradient(  white,rgb(182, 179, 179));
+    padding-left: 10px;
+}
+p{
+    padding-left: 10px;
+    font-size: 1.25em;
+}
+
+#navbar h1{
+    background-image: none;
+    margin: 0;
+    
 }
 body{
    background-color:  rgb(182, 179, 179);
@@ -154,11 +200,11 @@ h2{
 }
 .skills p{
     display: inline-block;
-    font-size: 1em;
     margin: 0;
-    padding: 0;
+
     font-weight: bold;
 }
+
 .star{
     height: 20px;
     width: 20px;
@@ -220,4 +266,9 @@ h2{
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
     animation-duration: 0.3s;
+}
+
+iframe{
+    width: 360px;
+    height: 240px;
 }
