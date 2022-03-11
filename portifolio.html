@@ -2,10 +2,40 @@
 <html>
     <head>
         <title>Luis Felipe</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/portifolio.css">
         <style>
-             @media (max-width: 600px) {
-                
+             @media (max-width: 1750px) {
+                #projects{
+                    grid-template-columns: repeat(4,auto);
+                }
+            }
+            @media (max-width: 1400px) {
+                #projects{
+                    grid-template-columns: repeat(3,auto);
+                }
+            }
+            @media (max-width: 1050px) {
+                main{
+                    grid-template-columns: auto 6fr;
+                }
+                #welcome-section{
+                    grid-row:1/ span 2;
+                }
+                #projects{
+                    grid-template-columns: repeat(2,auto);
+                }
+
+               
+            }
+            @media (max-width: 700px) {
+                #projects{
+                    grid-template-columns: repeat(1,auto);
+                }
+                main{
+                    grid-template-columns: auto;
+                }
             }
         </style>
     </head>
@@ -30,8 +60,12 @@
                  </div>
                 <a href="#welcome-section">Welcome</a>
             </div>
+            <section id="welcome-section">
+                <h1>Desenvolvedor Web Full-Stack Junior</h1>
+            </section>
             <div id="others">
                 <h1>Competências</h1>
+                <p>Abaixo segue uma lista das principais competências</p>
                 <h2>Linguagens</h2>
                 <div class="skills">
                     <p>Java</p>
@@ -131,9 +165,8 @@
                     </div>
                 <h2>Conceitos</h2>
             </div>
-            <section id="welcome-section">
-                <h1>Desenvolvedor Web Full-Stack Junior</h1>
-            </section>
+            
+        </main>
             <div id="content">
                 <h1>Projects</h1>
                 <section id="projects">
@@ -211,8 +244,8 @@
                 </section>
             </div>
            
-        </main>
        
-        
+       
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" type="text/javascript"></script>       
     </body>
 </html>

@@ -1,8 +1,11 @@
-
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
 #welcome-section{
-    height: 100vh;
-    grid-area: welcome;
-    background-color: blueviolet;
+   background-color: blueviolet;
+   height: 100vh;
     
 }
 h1{
@@ -13,26 +16,23 @@ h2{
 }
 
 main{
-    padding-top: 75px;
     display: grid;
-    grid-template-columns: 15vw auto 20vw;
+    grid-template-columns: auto 6fr 2fr;
     gap: 1vmin;
-    grid-template-areas:  "menu welcome others"
-                          "menu content content"
 }
 body{
     margin: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Bree Serif', 'Times New Roman', Times, serif;
 }
 
 #navbar{
     top: 0;
     left: 0;
-    height: 75px;
-    position: fixed;
+    position: sticky;
     width: 100%;
     display: flex;
     align-items: center;
+    z-index: 3;
     background-image: linear-gradient(  white,rgb(182, 179, 179));
 }
 #navbar h1{
@@ -62,20 +62,16 @@ body{
     margin-bottom: 2px;
     background-color: gray;
     border-radius: 50%;
-    display: flex;
+    display: block;
     flex-direction: column;
     align-items:center;
     align-self: center;
 }
 #menu{
-    position: fixed;
-    width: 15vw;
     overflow-y: auto;
-    max-height: 100vh;
     background-color: gainsboro;
     display: flex;
     flex-direction: column;
-    align-content: flex-start;
     align-items: stretch;
     
 }
@@ -88,14 +84,11 @@ body{
     background-color: gainsboro;
 }
 #content{
-    grid-area: content;
     background-color: white;
 }
 
 #others{
-    height: 100vh;
-    grid-area: others;
-    background-color: rgb(0, 255, 21);
+    background-color: gainsboro;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
@@ -107,13 +100,12 @@ body{
 }
 
 #projects{
-    padding: 1vmin;
-    grid-area: content;
+    padding: 20px;
     display: grid;
-    grid-template-columns: repeat(5,16vw);
-    grid-template-rows: repeat(2,10vw);;
-    justify-content: stretch;
-    gap: 1vmin;
+    grid-template-columns: repeat(5,auto);
+    justify-content: center;
+    align-items: center;
+    gap: 2vmin;
 }
 
 .project-tile{
@@ -128,8 +120,10 @@ body{
     text-decoration: none;
     color: black;
     position: relative;
+    width: 320px;
+    height: 240px;
 }
-main h1,main h2,main h3{
+h1, h2, h3{
     margin-top: 0;
     background-image:  linear-gradient(  white,rgb(182, 179, 179));
 }
@@ -176,13 +170,7 @@ h2{
     animation-duration: 0.5s;
 }
 
-.project-tile:hover{
-    z-index: 2;
-    animation-name: grow;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
-    animation-duration: 0.3s;
-}
+
 .project-tile h4{
     margin: 0;
 }
@@ -196,9 +184,9 @@ h2{
     }
 }
 
-@keyframes grow {
+@keyframes drop {
     100%{
-        transform: translateX(-8vw)  scale(2);
+        transform:  translateY(250px);
         box-shadow: 0 0px 20px 0px rgb(167, 167, 168);
 
     }
@@ -206,19 +194,27 @@ h2{
 
 .project-tile .tooltiptext {
     visibility: hidden;
-    width: 120px;
     background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
     text-align: justify;
-    padding: 5px 0;
+    padding: 10px ;
     border-radius: 6px;
    
     position: absolute;
-    top: 10vw;
-    width: 15.5vw;
-    z-index: 1;
+    width: 320px;
+   
 }
+.project-tile:hover{
+    z-index: 3;
+    
+}
+
 
 .project-tile:hover .tooltiptext {
     visibility: visible;
+    z-index: 2;
+    animation-name: drop;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-duration: 0.3s;
 }
