@@ -6,7 +6,7 @@ body{
     text-justify: auto;
 }
 #welcome-section{
-   background-color: white;
+   background-color: hsl(230, 50%, 95%);
    height: 100vh;
    display: flex;
    flex-direction: column;
@@ -37,7 +37,8 @@ body{
     display: flex;
     align-items: center;
     z-index: 5;
-    background-image: linear-gradient(  white,rgb(182, 179, 179));
+    background-image: linear-gradient( hsl(230, 53%, 95%),
+    hsl(230, 50%, 75%));
     padding: 10px;
 }
 #navbar h1{
@@ -47,7 +48,8 @@ body{
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 5px;
-    background-image: linear-gradient(  white,rgb(182, 179, 179));
+    background-image: linear-gradient( hsl(230, 53%, 85%),
+    hsl(230, 50%, 75%));
     font-size: large;
     font-weight: bold;
 }
@@ -79,7 +81,7 @@ body{
     margin-bottom: 2px;
     height: 210px;
     width: 210px;
-    background-color: gray;
+    background-color: hsl(230, 50%, 50%);
     border-radius: 50%;
     display: flex;
     flex-direction: column;
@@ -89,7 +91,7 @@ body{
 }
 #menu{
     overflow-y: auto;
-    background-color: gainsboro;
+    background-color: hsl(230, 50%, 80%);
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -97,7 +99,6 @@ body{
 }
 
 .menu-text{
-    background-color: gainsboro;
     padding: 5px;
     margin: 5px;
     border-radius: 5px;
@@ -121,14 +122,14 @@ body{
     margin-bottom: 3px;
 }
 #menu a:hover{
-    background-color: gainsboro;
+    background-color: white
 }
 #content{
-    background-color: white;
+    background-color: hsl(230, 50%, 95%);
 }
 
 #others{
-    background-color: gainsboro;
+    background-color: hsl(230, 50%, 80%);
     display: flex;
     flex-direction: column;
     align-content: flex-start;
@@ -147,14 +148,14 @@ body{
 }
 
 .project-tile{
+    background-color: hsl(230, 50%, 95%);
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: stretch;
     padding: 5px;
     border-radius: 10px;
-    background-color: gainsboro;
-    box-shadow: 0 0px 10px 0px rgb(167, 167, 168);
+    box-shadow: 0 0px 10px 0px gray;
     text-decoration: none;
     color: black;
     position: relative;
@@ -163,7 +164,8 @@ body{
 }
 h1, h2, h3{
     margin-top: 0;
-    background-image:  linear-gradient(  white,rgb(182, 179, 179));
+    background-image:  linear-gradient( hsl(230, 53%, 80%),
+    hsl(230, 50%, 65%));
     padding-left: 10px;
 }
 p{
@@ -177,7 +179,7 @@ p{
     
 }
 body{
-   background-color:  rgb(182, 179, 179);
+   background-color:  hsl(230, 50%, 50%);
  
 }
 
@@ -191,7 +193,6 @@ h2{
     text-align: center;
 }
 .skills{
-    background-color: gainsboro;
     display: grid;
     grid-template-columns: max-content auto;
     justify-content: stretch;
@@ -201,7 +202,6 @@ h2{
 .skills p{
     display: inline-block;
     margin: 0;
-
     font-weight: bold;
 }
 
@@ -243,7 +243,7 @@ h2{
 
 .project-tile .tooltiptext {
     visibility: hidden;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color:  hsl(230, 50%, 20%,0.9);
     color: #fff;
     text-align: justify;
     padding: 10px ;
