@@ -28,9 +28,11 @@
                 #projects{
                     grid-template-columns: repeat(2,auto);
                 }
-
-               
+                body{
+                    padding: 0;
+                }
             }
+
             @media (max-width: 700px) {
                 #projects{
                     grid-template-columns: repeat(1,auto);
@@ -53,6 +55,10 @@
                     width: 45vmin;
                     height: 33.75vmin;
                 }
+
+                body{
+                    padding: 0;
+                }
                 
             }
 
@@ -65,21 +71,17 @@
                     height: 67.5vmin;
                    
                 }
-                .project-tile:hover{
-                    animation: none;
-                }
-                @keyframes drop {
-                    100%{
-                        transform:  translateY(68.3vmin);
-                        box-shadow: 0 0px 20px 0px rgb(167, 167, 168);
-
-                    }
+                .project-tile:hover, .project-tile:focus{
+                    transform: none;
                 }
 
-                .project-tile .tooltiptext {
-                    width: 80vmin;
+                section li{
+                    list-style-type: none;
                 }
-               
+
+                section ul ul{
+                    padding: 0.5rem;
+                }
             }
            
         </style>
@@ -103,7 +105,7 @@
                 <a class="nav-link" href="#formation">Formação</a>
                 <a class="nav-link" href="#experience">Experiência</a>
                 <a class="nav-link" href="#projects">Projetos</a>
-                <a class="nav-link" href="#welcome-section">Resumo</a>
+                <a class="nav-link" href="#">Resumo</a>
             </div>
         </nav>
         <main>
@@ -271,55 +273,54 @@
                         <p>Empatia</p>
                     </div>
             </div>
-            
         </main>
             <div id="content">
-                <h1>Projetos</h1>
-                <section id="projects">
-                   
-                    <a href="tribute_page.html" target="_blank" class="project-tile">
-                        <span class="tooltiptext">Página construída  utilizando HTML e CSS como parte dos projetos requeridos pelo FreeCodeCamp.</span>
-                        <img src="./img/project-tribute-page.png" alt="Imagem da Página de Homenagem ao Homen de Ferro">
-                        <h4>  Página de Homenagem ao Homen de Ferro</h4>    
-                    </a>
-                    <a  href="survey_form.html" target="_blank" class="project-tile">
-                        <span class="tooltiptext">Página construída  utilizando HTML e CSS como parte dos projetos requeridos pelo FreeCodeCamp.</span>
-                        <img src="./img/project-surveyform.png" alt="Imagem do Formulário de Satisfação do Cliente">
-                        <h4> Formulário Satisfação do Cliente</h4>    
-                    </a>
-                    <a href="product_landing.html" target="_blank" class="project-tile">
-                        <span class="tooltiptext">Página construída  utilizando HTML e CSS como parte dos projetos requeridos pelo FreeCodeCamp.</span>
-                        <img src="./img/project-productlanding.png" alt="Imagem da Página com a Idéia">
-                        <h4>Pitch de Uma Idéia de Produto</h4>    
-                    </a>
-                    <a href="https://github.com/LuisFelipeAN/FreeCodeCamp-ResponsiveWebDesign" target="_blank" class="project-tile">
-                        <span class="tooltiptext">Página de portifólio contendos os projetos, habilidades e apresentação.</span>
-                        <img src="./img/project-portifolio.png" alt="Imagem do Portifolio ">
-                        <h4>  Portifolio</h4>    
-                    </a>
+                <section>
+                    <h1>Projetos</h1>
+                    <div id="projects">
+                        <a href="tribute_page.html" target="_blank" class="project-tile">
+                            <span class="tooltiptext">Página construída  utilizando HTML e CSS como parte dos projetos requeridos pelo FreeCodeCamp.</span>
+                            <img src="./img/project-tribute-page.png" alt="Imagem da Página de Homenagem ao Homen de Ferro">
+                            <h4>  Página de Homenagem ao Homen de Ferro</h4>    
+                        </a>
+                        <a  href="survey_form.html" target="_blank" class="project-tile">
+                            <span class="tooltiptext">Página construída  utilizando HTML e CSS como parte dos projetos requeridos pelo FreeCodeCamp.</span>
+                            <img src="./img/project-surveyform.png" alt="Imagem do Formulário de Satisfação do Cliente">
+                            <h4> Formulário Satisfação do Cliente</h4>    
+                        </a>
+                        <a href="product_landing.html" target="_blank" class="project-tile">
+                            <span class="tooltiptext">Página construída  utilizando HTML e CSS como parte dos projetos requeridos pelo FreeCodeCamp.</span>
+                            <img src="./img/project-productlanding.png" alt="Imagem da Página com a Idéia">
+                            <h4>Pitch de Uma Idéia de Produto</h4>    
+                        </a>
+                        <a href="https://github.com/LuisFelipeAN/FreeCodeCamp-ResponsiveWebDesign" target="_blank" class="project-tile">
+                            <span class="tooltiptext">Página de portifólio contendos os projetos, habilidades e apresentação.</span>
+                            <img src="./img/project-portifolio.png" alt="Imagem do Portifolio ">
+                            <h4>  Portifolio</h4>    
+                        </a>
 
-                    <a href=" https://github.com/LuisFelipeAN/ETBalls" target="_blank" class="project-tile">
-                        <span class="tooltiptext">Jogo desenvolvido em C# na Unity3D como parte dos trabalhos da disciplina de desenvolvimento de jogos (2018).</span>
-                        <img src="./img/et-balls.png" alt="Imagem Jogo ET-Balls">
-                        <h4>ET-Balls</h4>    
-                    </a>
-                    <a href="https://trab3-web3-luisfelipe.herokuapp.com/index.html" target="_blank" class="project-tile">
-                        <span class="tooltiptext">Aplicação desenvolvida utilizando NodeJS, Javascript e MongoDB. Permite o cadastro de clientes, produtos e efetua a atualização dos preços dos produtos com base no interesse dos clientes. Trabalho final da disciplina de Laboratório de Programação Web 3 (2017).</span>
-                        <img src="./img/trab3-labweb3.png" alt="Imagem Trabalho3 LabWeb3">
-                        <h4>NodeJS App</h4>    
-                    </a>
-                    <a href="https://github.com/LuisFelipeAN/Conversor_React" target="_blank" class="project-tile">
-                        <span class="tooltiptext">Crud de um app ReactJS para a conversão de moedas utilizando uma API.</span>
-                        <img src="./img/conversor-react.png" alt="Imagem Conversor React">
-                        <h4>Conversor React</h4>    
-                    </a>
+                        <a href=" https://github.com/LuisFelipeAN/ETBalls" target="_blank" class="project-tile">
+                            <span class="tooltiptext">Jogo desenvolvido em C# na Unity3D como parte dos trabalhos da disciplina de desenvolvimento de jogos (2018).</span>
+                            <img src="./img/et-balls.png" alt="Imagem Jogo ET-Balls">
+                            <h4>ET-Balls</h4>    
+                        </a>
+                        <a href="https://trab3-web3-luisfelipe.herokuapp.com/index.html" target="_blank" class="project-tile">
+                            <span class="tooltiptext">Aplicação desenvolvida utilizando NodeJS, Javascript e MongoDB. Permite o cadastro de clientes, produtos e efetua a atualização dos preços dos produtos com base no interesse dos clientes. Trabalho final da disciplina de Laboratório de Programação Web 3 (2017).</span>
+                            <img src="./img/trab3-labweb3.png" alt="Imagem Trabalho3 LabWeb3">
+                            <h4>NodeJS App</h4>    
+                        </a>
+                        <a href="https://github.com/LuisFelipeAN/Conversor_React" target="_blank" class="project-tile">
+                            <span class="tooltiptext">Crud de um app ReactJS para a conversão de moedas utilizando uma API.</span>
+                            <img src="./img/conversor-react.png" alt="Imagem Conversor React">
+                            <h4>Conversor React</h4>    
+                        </a>
 
-                    <a href="https://github.com/LuisFelipeAN/SCA" target="_blank" class="project-tile">
-                        <span class="tooltiptext">Especificação de requisitos de um sistema de controle acadêmico.</span>
-                        <img src="./img/sca.png" alt="Imagem Diagrama Classes SCA">
-                        <h4>SCA</h4>    
-                    </a>
-                   
+                        <a href="https://github.com/LuisFelipeAN/SCA" target="_blank" class="project-tile">
+                            <span class="tooltiptext">Especificação de requisitos de um sistema de controle acadêmico.</span>
+                            <img src="./img/sca.png" alt="Imagem Diagrama Classes SCA">
+                            <h4>SCA</h4>    
+                        </a>
+                  </div>
                 </section>
                 <section id="experience">
                     <h1>Experiência</h1>
