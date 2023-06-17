@@ -7,48 +7,41 @@
         <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/portifolio.css">
         <style>
-             @media (max-width: 1750px) {
-                #projects{
-                    grid-template-columns: repeat(4,auto);
-                }
-            }
-            @media (max-width: 1400px) {
-                #projects{
-                    grid-template-columns: repeat(3,auto);
-                }
-            }
             @media (max-width: 1050px) {
                 main{
                     grid-template-columns: auto 6fr;
                 }
+                
                 #welcome-section{
                     grid-row:1/ span 2;
                     height: auto;
                 }
-                #projects{
-                    grid-template-columns: repeat(2,auto);
-                }
+               
                 body{
                     padding: 0;
                 }
             }
 
             @media (max-width: 700px) {
-                #projects{
-                    grid-template-columns: repeat(1,auto);
-                }
+              
                 main{
                     grid-template-columns: auto;
                 }
+
                 #navbar{
                     flex-direction: column;
-                    align-items: stretch;
-                    position: static;
+                    align-items: center;
+                    padding: 0;
+                    font-size: smaller;
                 }
+
+                #navbar h1 {
+                    font-size: 13px;
+                }
+
                 #links{
-                    flex-direction: column;
-                    flex-direction: column-reverse;
-                    align-items: stretch;
+                    display: block;
+                    margin-bottom: 1rem;
                 }
 
                 iframe{
@@ -56,21 +49,13 @@
                     height: 33.75vmin;
                 }
 
-                body{
-                    padding: 0;
+                .container{
+                    padding-left: 0;
+                    padding-right: 0;
                 }
-                
             }
 
             @media (max-width: 560px) {
-                #projects{
-                    padding: 0;
-                }
-                .project-tile{
-                    width: 90vmin;
-                    height: 67.5vmin;
-                   
-                }
                 .project-tile:hover, .project-tile:focus{
                     transform: none;
                 }
@@ -85,7 +70,6 @@
             }
            
         </style>
-
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-FBKRJK8G41"></script>
         <script>
@@ -95,20 +79,28 @@
 
             gtag('config', 'G-FBKRJK8G41');
         </script>
-
+        <script>
+             document.addEventListener('scroll', function(event){
+                if(window.scrollY >= 100){
+                    document.querySelector('#navbar').classList.add("nav-bar-retracted")
+                }else if(window.scrollY == 0){
+                    document.querySelector('#navbar').classList.remove("nav-bar-retracted")
+                }
+            });
+        </script>
     </head>
     <body>
         <nav id="navbar">
-            <h1>Luis Felipe de Almeida Nascimento</h1>
+            <h1 id="nome-completo">Luis Felipe de Almeida Nascimento</h1>
             <div id="links">
-                <a class="nav-link" href="#certificates">Certificados</a>
-                <a class="nav-link" href="#formation">Formação</a>
-                <a class="nav-link" href="#experience">Experiência</a>
-                <a class="nav-link" href="#projects">Projetos</a>
                 <a class="nav-link" href="#">Resumo</a>
+                <a class="nav-link" href="#projects">Projetos</a>
+                <a class="nav-link" href="#experience">Experiência</a>
+                <a class="nav-link" href="#formation">Formação</a>
+                <a class="nav-link" href="#certificates">Certificados</a>
             </div>
         </nav>
-        <main>
+        <main class="container">
             <div id="menu">
                 <div id="slot-img">
                 <img id="picture" src="img/img-perfil.jpg" alt="Perfil Image">
@@ -160,61 +152,52 @@
                 <h1>Competências</h1>
                 <h2>Linguagens</h2>
                 <div class="skills">
-                    <p>Java</p>
-                    <div class="level">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star2.png" alt="">
-                    </div>
                     <p>Javascript</p>
                     <div class="level">
                         <img class="star" src="img/star.png" alt="">
                         <img class="star" src="img/star.png" alt="">
                         <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star2.png" alt="">
-                        <img class="star" src="img/star2.png" alt="">
+                        <img class="star" src="img/star.png" alt="">
+                        <img class="star" src="img/star.png" alt="">
                     </div>
-                
                     <p>HTML</p>
                     <div class="level">
                         <img class="star" src="img/star.png" alt="">
                         <img class="star" src="img/star.png" alt="">
                         <img class="star" src="img/star.png" alt="">
                         <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star2.png" alt="">
+                        <img class="star" src="img/star.png" alt="">
                     </div>
                     <p>CSS</p>
                     <div class="level">
                         <img class="star" src="img/star.png" alt="">
                         <img class="star" src="img/star.png" alt="">
                         <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star2.png" alt="">
+                        <img class="star" src="img/star.png" alt="">
                         <img class="star" src="img/star2.png" alt="">
                     </div>
-                    <p>C/C++</p>
+                    <p>PHP</p>
                     <div class="level">
                         <img class="star" src="img/star.png" alt="">
                         <img class="star" src="img/star.png" alt="">
                         <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star2.png" alt="">
-                        <img class="star" src="img/star2.png" alt="">
+                        <img class="star" src="img/star.png" alt="">
+                        <img class="star" src="img/star.png" alt="">
                     </div>
-                    <p>C#</p>
+                    <p>SQL - MySQL</p>
                     <div class="level">
                         <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star2.png" alt="">
-                        <img class="star" src="img/star2.png" alt="">
-                        <img class="star" src="img/star2.png" alt="">
-                        <img class="star" src="img/star2.png" alt="">
-                    </div>
-                    <p>Python</p>
-                    <div class="level">
+                        <img class="star" src="img/star.png" alt="">
+                        <img class="star" src="img/star.png" alt="">
                         <img class="star" src="img/star.png" alt="">
                         <img class="star" src="img/star2.png" alt="">
-                        <img class="star" src="img/star2.png" alt="">
-                        <img class="star" src="img/star2.png" alt="">
+                    </div>
+                    <p>Git</p>
+                    <div class="level">
+                        <img class="star" src="img/star.png" alt="">
+                        <img class="star" src="img/star.png" alt="">
+                        <img class="star" src="img/star.png" alt="">
+                        <img class="star" src="img/star.png" alt="">
                         <img class="star" src="img/star2.png" alt="">
                     </div>
                 </div>
@@ -226,15 +209,31 @@
                         <div class="level">
                             <img class="star" src="img/star.png" alt="">
                             <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
-                        </div>
-                        <p>Spring Boot</p>
-                        <div class="level">
                             <img class="star" src="img/star.png" alt="">
                             <img class="star" src="img/star2.png" alt="">
                             <img class="star" src="img/star2.png" alt="">
+                        </div>
+                        <p>Laravel</p>
+                        <div class="level">
+                            <img class="star" src="img/star.png" alt="">
+                            <img class="star" src="img/star.png" alt="">
+                            <img class="star" src="img/star.png" alt="">
+                            <img class="star" src="img/star.png" alt="">
+                            <img class="star" src="img/star2.png" alt="">
+                        </div>
+                        <p>Vue</p>
+                        <div class="level">
+                            <img class="star" src="img/star.png" alt="">
+                            <img class="star" src="img/star.png" alt="">
+                            <img class="star" src="img/star.png" alt="">
+                            <img class="star" src="img/star.png" alt="">
+                            <img class="star" src="img/star2.png" alt="">
+                        </div>
+                        <p>Inertia</p>
+                        <div class="level">
+                            <img class="star" src="img/star.png" alt="">
+                            <img class="star" src="img/star.png" alt="">
+                            <img class="star" src="img/star.png" alt="">
                             <img class="star" src="img/star2.png" alt="">
                             <img class="star" src="img/star2.png" alt="">
                         </div>
@@ -244,22 +243,6 @@
                             <img class="star" src="img/star2.png" alt="">
                             <img class="star" src="img/star2.png" alt="">
                             <img class="star" src="img/star2.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
-                        </div>
-                        <p>NextJS</p>
-                        <div class="level">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
-                        </div>
-                        <p>EMF e GMF</p>
-                        <div class="level">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star.png" alt="">
                             <img class="star" src="img/star2.png" alt="">
                         </div>
                     </div>
@@ -274,7 +257,7 @@
                     </div>
             </div>
         </main>
-            <div id="content">
+            <div id="content" class="container">
                 <section>
                     <h1>Projetos</h1>
                     <div id="projects">
