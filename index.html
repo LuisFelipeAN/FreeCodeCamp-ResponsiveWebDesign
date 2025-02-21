@@ -23,7 +23,10 @@
             }
 
             @media (max-width: 700px) {
-              
+                .project-tile:hover, .project-tile:focus{
+                    transform: none !important;
+                }
+
                 main{
                     grid-template-columns: auto;
                 }
@@ -56,10 +59,6 @@
             }
 
             @media (max-width: 560px) {
-                .project-tile:hover, .project-tile:focus{
-                    transform: none;
-                }
-
                 section li{
                     list-style-type: none;
                 }
@@ -126,9 +125,6 @@
                      <a id="profile-link" href="https://github.com/LuisFelipeAN" target="_blank"> <img src="https://raw.githubusercontent.com/jmnote/z-icons/master/svg/github.svg" alt="GitHub Profile" ></a>
                      <a href="mailto:luis.felipe.almeida.nascimento@gmail.com" target="_blank"> <img src="	https://raw.githubusercontent.com/jmnote/z-icons/master/svg/google.svg" alt="Luis Felipe Email" ></a>
                      <a href="https://www.linkedin.com/in/luis-felipe-almeida-nascimento-73b029223" target="_blank"> <img src="./img/linkedin.png" alt="Luis Felipe Linkedin" ></a>
-
-
-                     
                  </div>
                  <div class="menu-text">
                     <b>Breve Introdução</b>: Sou uma pessoa bem criativa, tenho uma visão ampla e sempre busco olhar e considerar diferentes pontos para encontrar uma solução.
@@ -281,23 +277,11 @@
                             <img src="./img/project-portifolio.png" alt="Imagem do Portifolio ">
                             <h4>  Portifolio</h4>    
                         </a>
-
                         <a href=" https://github.com/LuisFelipeAN/ETBalls" target="_blank" class="project-tile">
                             <span class="tooltiptext">Jogo desenvolvido em C# na Unity3D como parte dos trabalhos da disciplina de desenvolvimento de jogos (2018).</span>
                             <img src="./img/et-balls.png" alt="Imagem Jogo ET-Balls">
                             <h4>ET-Balls</h4>    
                         </a>
-                        <a href="https://trab3-web3-luisfelipe.herokuapp.com/index.html" target="_blank" class="project-tile">
-                            <span class="tooltiptext">Aplicação desenvolvida utilizando NodeJS, Javascript e MongoDB. Permite o cadastro de clientes, produtos e efetua a atualização dos preços dos produtos com base no interesse dos clientes. Trabalho final da disciplina de Laboratório de Programação Web 3 (2017).</span>
-                            <img src="./img/trab3-labweb3.png" alt="Imagem Trabalho3 LabWeb3">
-                            <h4>NodeJS App</h4>    
-                        </a>
-                        <a href="https://github.com/LuisFelipeAN/Conversor_React" target="_blank" class="project-tile">
-                            <span class="tooltiptext">Crud de um app ReactJS para a conversão de moedas utilizando uma API.</span>
-                            <img src="./img/conversor-react.png" alt="Imagem Conversor React">
-                            <h4>Conversor React</h4>    
-                        </a>
-
                         <a href="https://github.com/LuisFelipeAN/SCA" target="_blank" class="project-tile">
                             <span class="tooltiptext">Especificação de requisitos de um sistema de controle acadêmico.</span>
                             <img src="./img/sca.png" alt="Imagem Diagrama Classes SCA">
@@ -308,6 +292,12 @@
                 <section id="experience">
                     <h1>Experiência</h1>
                     <ul>
+                        <li>Nativa Desenvolvimento</li>
+                        <ul>
+                            <li>Analista de Sistemas | Maio de 2022 - em curso</li>
+                            <p>Desenvolvimento web abordando o levantamento, projeto, implementação back-end e front-end, testes unitários.</p>
+                        </ul>
+
                         <li >Universidade Federal de Juiz de Fora</li>
                         <ul>
                             <li>Tutor na Disciplina de Algoritmos | novembro de 2021 a fevereiro 2022 (4 meses)</li>
@@ -331,7 +321,8 @@
                             <li>Bacharel em Ciências da Computação | 2014 - 2019;</li>
                             <p>Título do TCC: "SACM Editor: an OMG standard compliant model-based tool
                                 for specification of Assurance Cases for Safety-Critical Systems".</p>
-                            <li>Mestrado em Ciências da Computação | 2021 - Em Curso.</li>
+                            <li>Mestrado em Ciências da Computação | 2021 - 2024.</li>
+                            <p>Título do TCC: "A Model-Driven Methodology to Support Runtime Assurance of Open and Adaptive Systems".</p>
                         </ul>
                     </ul>
                 </section>

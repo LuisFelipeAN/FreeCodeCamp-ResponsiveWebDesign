@@ -14,8 +14,8 @@ body{
 }
 
 .projects{
-    display: grid;
-    grid-template-columns: 90%;
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
     justify-content: center;
     text-align: center;
     row-gap: 2vmin;
