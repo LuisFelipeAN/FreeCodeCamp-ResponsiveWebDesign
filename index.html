@@ -1,339 +1,902 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="pt-BR">
     <head>
-        <title>Luis Felipe</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Portifolio do Luis Felipe de Almeida Nascimento." />
-        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/portifolio.css">
-        <style>
-            @media (max-width: 1050px) {
-                main{
-                    grid-template-columns: auto 6fr;
-                }
-                
-                #welcome-section{
-                    grid-row:1/ span 2;
-                    height: auto;
-                }
-               
-                body{
-                    padding: 0;
-                }
-            }
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Portfólio de Luis Felipe - Desenvolvedor Web Full-Stack"
+        />
+        <title>Luis Felipe | Desenvolvedor Full-Stack</title>
 
-            @media (max-width: 700px) {
-                .project-tile:hover, .project-tile:focus{
-                    transform: none !important;
-                }
+        <!-- Fontes modernas -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
 
-                main{
-                    grid-template-columns: auto;
-                }
+        <link rel="stylesheet" href="css/portfolio.css" />
 
-                #navbar{
-                    flex-direction: column;
-                    align-items: center;
-                    padding: 0;
-                    font-size: smaller;
-                }
-
-                #navbar h1 {
-                    font-size: 13px;
-                }
-
-                #links{
-                    display: block;
-                    margin-bottom: 1rem;
-                }
-
-                iframe{
-                    width: 45vmin;
-                    height: 33.75vmin;
-                }
-
-                .container{
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-            }
-
-            @media (max-width: 560px) {
-                section li{
-                    list-style-type: none;
-                }
-
-                section ul ul{
-                    padding: 0.5rem;
-                }
-            }
-           
-        </style>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FBKRJK8G41"></script>
+        <!-- Google Analytics -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-FBKRJK8G41"
+        ></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-FBKRJK8G41');
-        </script>
-        <script>
-             document.addEventListener('scroll', function(event){
-                if(window.scrollY >= 100){
-                    document.querySelector('#navbar').classList.add("nav-bar-retracted")
-                }else if(window.scrollY == 0){
-                    document.querySelector('#navbar').classList.remove("nav-bar-retracted")
-                }
-            });
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-FBKRJK8G41");
         </script>
     </head>
     <body>
-        <nav id="navbar">
-            <h1 id="nome-completo">Luis Felipe de Almeida Nascimento</h1>
-            <div id="links">
-                <a class="nav-link" href="#">Resumo</a>
-                <a class="nav-link" href="#projects">Projetos</a>
-                <a class="nav-link" href="#experience">Experiência</a>
-                <a class="nav-link" href="#formation">Formação</a>
-                <a class="nav-link" href="#certificates">Certificados</a>
-            </div>
-        </nav>
-        <main class="container">
-            <div id="menu">
-                <div id="slot-img">
-                <img id="picture" src="img/img-perfil.jpg" alt="Perfil Image">
-                 </div>
-                 <div class="menu-text" id="aim">
-                    <b>Desenvolvedor Web Full-Stack</b>
-                 </div>
-                 <div class="menu-text">
-                    Olá, bem vindo ao meu portfólio. Espero que goste do que encontrar, e se tiver interesse sinta-se livre entrar em contato por qualquer um dos meios abaixo.
-                 </div>
-                 <div class="menu-text" id="contatct">
-                     <div class="info">
-                        <b>Cel</b>: (32) 98407-3003
-                     </div>
-                     <div class="info">
-                        <b>Estado</b>: Minas Gerais
-                     </div>
-                     <div class="info">
-                        <b>Cidade</b> Juiz de Fora
-                     </div>
-                 </div>
-                 <div class="menu-text" id="social">
-                     <a id="profile-link" href="https://github.com/LuisFelipeAN" target="_blank"> <img src="https://raw.githubusercontent.com/jmnote/z-icons/master/svg/github.svg" alt="GitHub Profile" ></a>
-                     <a href="mailto:luis.felipe.almeida.nascimento@gmail.com" target="_blank"> <img src="	https://raw.githubusercontent.com/jmnote/z-icons/master/svg/google.svg" alt="Luis Felipe Email" ></a>
-                     <a href="https://www.linkedin.com/in/luis-felipe-almeida-nascimento-73b029223" target="_blank"> <img src="./img/linkedin.png" alt="Luis Felipe Linkedin" ></a>
-                 </div>
-                 <div class="menu-text">
-                    <b>Breve Introdução</b>: Sou uma pessoa bem criativa, tenho uma visão ampla e sempre busco olhar e considerar diferentes pontos para encontrar uma solução.
-                 </div>
-                 <div class="menu-text" id="hobbies">
-                    <b>Hobbies</b>: Leitura nas horas vagas, desenhar e me aprofundar em alguma notícia ou curiosidade no dia a dia.
-                 </div>
+        <!-- Navegação -->
+        <header class="header">
+            <nav class="nav" id="navbar">
+                <div class="nav-container">
+                    <a
+                        href="#"
+                        class="nav-logo"
+                        aria-label="Luis Felipe - Início"
+                    >
+                        <span class="logo-text">LF</span>
+                    </a>
+                    <button
+                        class="nav-toggle"
+                        aria-label="Toggle menu"
+                        aria-expanded="false"
+                    >
+                        <span class="hamburger"></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="#about" class="nav-link">Sobre</a></li>
+                        <li>
+                            <a href="#skills" class="nav-link">Habilidades</a>
+                        </li>
+                        <li>
+                            <a href="#projects" class="nav-link">Projetos</a>
+                        </li>
+                        <li>
+                            <a href="#experience" class="nav-link"
+                                >Experiência</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#education" class="nav-link">Formação</a>
+                        </li>
+                        <li>
+                            <a href="#certificates" class="nav-link"
+                                >Certificados</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#contact" class="nav-link nav-cta"
+                                >Contato</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
-            </div>
-            <section id="welcome-section">
-                <h1>Resumo</h1>
-                <p>Engenheiro de software, programador back-end e front-end à procura da primeira oportunidade no mercado de trabalho. Na área acadêmica (Graduação e Mestrado) cursei diversas disciplinas que me introduziram a diversas tecnologias. Algumas delas sendo Java, JavaScript, C/C++, C#, NodeJS, Linux, Python, Git, NoSQL, Maven.</p>
-               
-                <p>Durante o processo de desenvolvimento gosto de seguir padrões e boas práticas com o intuito de produzir uma solução eficiente, facilmente compreensível e reutilizável.</p>
-
-                <p>Atualmente possuo uma familiaridade maior com a linguagem Java devido ao tempo que passei desenvolvendo meus trabalhos de TCC e dissertação. Sua aplicação teve foco no desenvolvimento de aplicações e extensões do Eclipse. Entretanto estou aprimorando ainda mais as minhas habilidades nas demais tecnologias. O meu foco atual é no desenvolvimento Web.</p> 
-                    
-                <p>Em paralelo a isso estou desenvolvendo uma extensão do Eclipse para a instanciação automática de padrões de casos de segurança compatíveis com a notação SACM utilizando os frameworks Eclipse EMF e Epsilon.</p>
-            </section>
-            <div id="others">
-                <h1>Competências</h1>
-                <h2>Linguagens</h2>
-                <div class="skills">
-                    <p>Javascript</p>
-                    <div class="level">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                    </div>
-                    <p>HTML</p>
-                    <div class="level">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                    </div>
-                    <p>CSS</p>
-                    <div class="level">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star2.png" alt="">
-                    </div>
-                    <p>PHP</p>
-                    <div class="level">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                    </div>
-                    <p>SQL - MySQL</p>
-                    <div class="level">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star2.png" alt="">
-                    </div>
-                    <p>Git</p>
-                    <div class="level">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star.png" alt="">
-                        <img class="star" src="img/star2.png" alt="">
+        <main class="main">
+            <!-- Hero Section -->
+            <section class="hero" id="hero">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <p class="hero-greeting">Olá, eu sou</p>
+                            <h1 class="hero-name">Luis Felipe</h1>
+                            <h2 class="hero-title">
+                                Desenvolvedor Web Full-Stack
+                            </h2>
+                            <p class="hero-description">
+                                Engenheiro de software com experiência em
+                                desenvolvimento back-end e front-end. Foco em
+                                criar soluções eficientes, escaláveis e com
+                                ótima experiência do usuário.
+                            </p>
+                            <div class="hero-cta">
+                                <a href="#projects" class="btn btn-primary"
+                                    >Ver Projetos</a
+                                >
+                                <a href="#contact" class="btn btn-secondary"
+                                    >Entrar em Contato</a
+                                >
+                            </div>
+                        </div>
+                        <div class="hero-image">
+                            <div class="image-wrapper">
+                                <img
+                                    src="img/img-perfil.jpg"
+                                    alt="Luis Felipe - Desenvolvedor Full-Stack"
+                                    class="profile-img"
+                                />
+                                <div class="image-decoration"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                
-                <h2>Frameworks</h2>
-                    <div class="skills">
-                        <p>NodeJS</p>
-                        <div class="level">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
-                        </div>
-                        <p>Laravel</p>
-                        <div class="level">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
-                        </div>
-                        <p>Vue</p>
-                        <div class="level">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
-                        </div>
-                        <p>Inertia</p>
-                        <div class="level">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
-                        </div>
-                        <p>ReactJS</p>
-                        <div class="level">
-                            <img class="star" src="img/star.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
-                            <img class="star" src="img/star2.png" alt="">
-                        </div>
-                    </div>
-                <h2>Outros</h2>
-                    <div class="skills" style="grid-template-columns: max-content;">
-                        <p>Inglês</p>
-                        <p>Padrões de Design</p>
-                        <p>Resolução de problemas</p>
-                        <p>Capacidade analítica</p>
-                        <p>Comunicação</p>
-                        <p>Empatia</p>
-                    </div>
-            </div>
-        </main>
-            <div id="content" class="container">
-                <section>
-                    <h1>Projetos</h1>
-                    <div id="projects">
-                        <a href="tribute_page.html" target="_blank" class="project-tile">
-                            <span class="tooltiptext">Página construída  utilizando HTML e CSS como parte dos projetos requeridos pelo FreeCodeCamp.</span>
-                            <img src="./img/project-tribute-page.png" alt="Imagem da Página de Homenagem ao Homen de Ferro">
-                            <h4>  Página de Homenagem ao Homen de Ferro</h4>    
-                        </a>
-                        <a  href="survey_form.html" target="_blank" class="project-tile">
-                            <span class="tooltiptext">Página construída  utilizando HTML e CSS como parte dos projetos requeridos pelo FreeCodeCamp.</span>
-                            <img src="./img/project-surveyform.png" alt="Imagem do Formulário de Satisfação do Cliente">
-                            <h4> Formulário Satisfação do Cliente</h4>    
-                        </a>
-                        <a href="product_landing.html" target="_blank" class="project-tile">
-                            <span class="tooltiptext">Página construída  utilizando HTML e CSS como parte dos projetos requeridos pelo FreeCodeCamp.</span>
-                            <img src="./img/project-productlanding.png" alt="Imagem da Página com a Idéia">
-                            <h4>Pitch de Uma Idéia de Produto</h4>    
-                        </a>
-                        <a href="https://github.com/LuisFelipeAN/FreeCodeCamp-ResponsiveWebDesign" target="_blank" class="project-tile">
-                            <span class="tooltiptext">Página de portifólio contendos os projetos, habilidades e apresentação.</span>
-                            <img src="./img/project-portifolio.png" alt="Imagem do Portifolio ">
-                            <h4>  Portifolio</h4>    
-                        </a>
-                        <a href=" https://github.com/LuisFelipeAN/ETBalls" target="_blank" class="project-tile">
-                            <span class="tooltiptext">Jogo desenvolvido em C# na Unity3D como parte dos trabalhos da disciplina de desenvolvimento de jogos (2018).</span>
-                            <img src="./img/et-balls.png" alt="Imagem Jogo ET-Balls">
-                            <h4>ET-Balls</h4>    
-                        </a>
-                        <a href="https://github.com/LuisFelipeAN/SCA" target="_blank" class="project-tile">
-                            <span class="tooltiptext">Especificação de requisitos de um sistema de controle acadêmico.</span>
-                            <img src="./img/sca.png" alt="Imagem Diagrama Classes SCA">
-                            <h4>SCA</h4>    
-                        </a>
-                  </div>
-                </section>
-                <section id="experience">
-                    <h1>Experiência</h1>
-                    <ul>
-                        <li>Nativa Desenvolvimento</li>
-                        <ul>
-                            <li>Analista de Sistemas | Maio de 2022 - em curso</li>
-                            <p>Desenvolvimento web abordando o levantamento, projeto, implementação back-end e front-end, testes unitários.</p>
-                        </ul>
+            </section>
 
-                        <li >Universidade Federal de Juiz de Fora</li>
-                        <ul>
-                            <li>Tutor na Disciplina de Algoritmos | novembro de 2021 a fevereiro 2022 (4 meses)</li>
-                            <p>Auxílio na elaboração de exercícios.</p>
-                            <li>Bolsista de Iniciação Científica | agosto de 2019 a julho de 2020 (1 ano)</li>
-                            <p>Gerenciamento de variabilidades no processo de engenharia de segurança e
-                                de proteção de sistemas críticos. Extensão das ferramentas OSATE-AADL e HiPHOPS.</p>
-                                <iframe id="video" src="https://www.youtube.com/embed/DnT81hrC5kY" frameborder="0" allowfullscreen ></iframe>
-                            <li>Bolsista de Iniciação Científica | agosto de 2018 a julho de 2019 (1 ano)
-                            </li>
-                            <p>Desenvolvimento e integração de ferramentas dirigidas a modelos para apoiar a engenharia e a certificação de sistemas críticos.</p>
-                            <iframe id="video" src="https://www.youtube.com/embed/rcGNSWd1qLc" frameborder="0" allowfullscreen ></iframe>
-                        </ul>
-                    </ul>
-                </section>
-                <section id="formation">
-                    <h1>Formação</h1>
-                    <ul>
-                        <li>Universidade Federal de Juiz de Fora</li>
-                        <ul>
-                            <li>Bacharel em Ciências da Computação | 2014 - 2019;</li>
-                            <p>Título do TCC: "SACM Editor: an OMG standard compliant model-based tool
-                                for specification of Assurance Cases for Safety-Critical Systems".</p>
-                            <li>Mestrado em Ciências da Computação | 2021 - 2024.</li>
-                            <p>Título do TCC: "A Model-Driven Methodology to Support Runtime Assurance of Open and Adaptive Systems".</p>
-                        </ul>
-                    </ul>
-                </section>
-                <section id="certificates">
-                    <h1>Certificados</h1>
-                    <ul>
-                        <li><a href="https://www.linkedin.com/learning/certificates/2fac90312eca000ed89e0304513c4dc979ac1b78df25884471cd05715410d28a"  target="_blank">Learning Spring with Spring Boot (2019)</a></li>
-                        <li><a href="https://efset.org/cert/vY4u5Q"  target="_blank">EF SET English Certificate 72/100 (C2 Proficient)</a></li>
-                        <li><a href="https://freecodecamp.org/certification/fcc9c470496-502a-42f8-bcfb-62e4f6fc9832/responsive-web-design" target="_blank">Responsive Web Design</a></li>
-                    </ul>
-                </section>
+            <!-- Sobre -->
+            <section class="section about" id="about">
+                <div class="container">
+                    <h2 class="section-title">Sobre Mim</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p>
+                                Engenheiro de software em busca da primeira
+                                oportunidade no mercado de trabalho. Durante a
+                                graduação e mestrado, tive contato com diversas
+                                tecnologias e disciplinas que ampliaram meu
+                                conhecimento técnico.
+                            </p>
+                            <p>
+                                Tenho familiaridade com linguagens como
+                                <strong>Java</strong>,
+                                <strong>JavaScript</strong>,
+                                <strong>C/C++</strong>, <strong>C#</strong>,
+                                <strong>NodeJS</strong>,
+                                <strong>Python</strong> e ferramentas como
+                                <strong>Git</strong>, <strong>Linux</strong>,
+                                <strong>Maven</strong> e bancos de dados
+                                <strong>NoSQL</strong>.
+                            </p>
+                            <p>
+                                Valorizo padrões de código, boas práticas e
+                                documentação, buscando sempre produzir soluções
+                                limpas, reutilizáveis e de fácil manutenção.
+                            </p>
+                            <p>
+                                Atualmente, estou me aprofundando no
+                                desenvolvimento web moderno, com foco em
+                                <strong>React</strong>, <strong>Vue</strong> e
+                                <strong>Node.js</strong>. Paralelamente,
+                                trabalho no desenvolvimento de uma extensão do
+                                Eclipse para instanciação automática de padrões
+                                de segurança usando SACM, EMF e Epsilon.
+                            </p>
+                        </div>
+                        <div class="about-info">
+                            <div class="info-card">
+                                <h3>Localização</h3>
+                                <p><strong>Estado:</strong> Minas Gerais</p>
+                                <p><strong>Cidade:</strong> Juiz de Fora</p>
+                            </div>
+                            <div class="info-card">
+                                <h3>Contato</h3>
+                                <p><strong>Celular:</strong> (32) 98407-3003</p>
+                                <p>
+                                    <strong>Email:</strong>
+                                    luis.felipe.almeida.nascimento@gmail.com
+                                </p>
+                            </div>
+                            <div class="info-card">
+                                <h3>Interesses</h3>
+                                <p>
+                                    Leitura, desenho, tecnologia, segurança de
+                                    software
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Habilidades -->
+            <section class="section skills" id="skills">
+                <div class="container">
+                    <h2 class="section-title">Habilidades Técnicas</h2>
+                    <div class="skills-grid">
+                        <!-- Linguagens -->
+                        <div class="skill-category">
+                            <h3 class="category-title">Linguagens</h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <span class="skill-name">JavaScript</span>
+                                    <div class="skill-bar">
+                                        <div
+                                            class="skill-progress"
+                                            data-level="90"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">HTML/CSS</span>
+                                    <div class="skill-bar">
+                                        <div
+                                            class="skill-progress"
+                                            data-level="85"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">PHP</span>
+                                    <div class="skill-bar">
+                                        <div
+                                            class="skill-progress"
+                                            data-level="80"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">SQL/MySQL</span>
+                                    <div class="skill-bar">
+                                        <div
+                                            class="skill-progress"
+                                            data-level="75"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Java</span>
+                                    <div class="skill-bar">
+                                        <div
+                                            class="skill-progress"
+                                            data-level="85"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Python</span>
+                                    <div class="skill-bar">
+                                        <div
+                                            class="skill-progress"
+                                            data-level="70"
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Frameworks -->
+                        <div class="skill-category">
+                            <h3 class="category-title">
+                                Frameworks & Bibliotecas
+                            </h3>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <span class="skill-name">Node.js</span>
+                                    <div class="skill-bar">
+                                        <div
+                                            class="skill-progress"
+                                            data-level="80"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Laravel</span>
+                                    <div class="skill-bar">
+                                        <div
+                                            class="skill-progress"
+                                            data-level="75"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Vue.js</span>
+                                    <div class="skill-bar">
+                                        <div
+                                            class="skill-progress"
+                                            data-level="70"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">React</span>
+                                    <div class="skill-bar">
+                                        <div
+                                            class="skill-progress"
+                                            data-level="65"
+                                        ></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <span class="skill-name">Inertia.js</span>
+                                    <div class="skill-bar">
+                                        <div
+                                            class="skill-progress"
+                                            data-level="60"
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ferramentas -->
+                        <div class="skill-category">
+                            <h3 class="category-title">Ferramentas & Outros</h3>
+                            <div class="skill-tags">
+                                <span class="tag">Git & GitHub</span>
+                                <span class="tag">Linux</span>
+                                <span class="tag">Docker</span>
+                                <span class="tag">Maven</span>
+                                <span class="tag">Eclipse EMF</span>
+                                <span class="tag">Epsilon</span>
+                                <span class="tag">Inglês Fluente (C2)</span>
+                                <span class="tag">Padrões de Design</span>
+                                <span class="tag">Metodologias Ágeis</span>
+                                <span class="tag">Testes Unitários</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projetos -->
+            <section class="section projects" id="projects">
+                <div class="container">
+                    <h2 class="section-title">Projetos em Destaque</h2>
+                    <div class="projects-grid">
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img
+                                    src="./img/project-tribute-page.png"
+                                    alt="Página de Homenagem ao Homem de Ferro"
+                                />
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">
+                                    Página de Homenagem ao Homem de Ferro
+                                </h3>
+                                <p class="project-description">
+                                    Página construída utilizando HTML e CSS como
+                                    parte dos projetos requeridos pelo
+                                    FreeCodeCamp.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="tribute_page.html"
+                                        target="_blank"
+                                        class="project-link"
+                                    >
+                                        Ver Projeto
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img
+                                    src="./img/project-surveyform.png"
+                                    alt="Formulário de Satisfação do Cliente"
+                                />
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">
+                                    Formulário de Satisfação
+                                </h3>
+                                <p class="project-description">
+                                    Formulário responsivo desenvolvido com HTML
+                                    e CSS, focado em acessibilidade e
+                                    experiência do usuário.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">Acessibilidade</span>
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="survey_form.html"
+                                        target="_blank"
+                                        class="project-link"
+                                    >
+                                        Ver Projeto
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img
+                                    src="./img/project-productlanding.png"
+                                    alt="Pitch de Produto"
+                                />
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Pitch de Produto</h3>
+                                <p class="project-description">
+                                    Landing page moderna e responsiva para
+                                    apresentação de produto, com design atraente
+                                    e conversão.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">Responsivo</span>
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="product_landing.html"
+                                        target="_blank"
+                                        class="project-link"
+                                    >
+                                        Ver Projeto
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img
+                                    src="./img/project-portifolio.png"
+                                    alt="Portfólio Responsivo"
+                                />
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">
+                                    Portfólio Responsivo
+                                </h3>
+                                <p class="project-description">
+                                    Site de portfólio completo com design
+                                    responsivo, animações suaves e estrutura
+                                    moderna.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">Responsive</span>
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/LuisFelipeAN/FreeCodeCamp-ResponsiveWebDesign"
+                                        target="_blank"
+                                        class="project-link"
+                                    >
+                                        Ver no GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img
+                                    src="./img/et-balls.png"
+                                    alt="Jogo ET-Balls"
+                                />
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">ET-Balls</h3>
+                                <p class="project-description">
+                                    Jogo 2D desenvolvido em C# com Unity3D, com
+                                    física, colisões e sistema de pontuação.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag">C#</span>
+                                    <span class="tag">Unity3D</span>
+                                    <span class="tag">Game Dev</span>
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/LuisFelipeAN/ETBalls"
+                                        target="_blank"
+                                        class="project-link"
+                                    >
+                                        Ver no GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-card">
+                            <div class="project-image">
+                                <img
+                                    src="./img/sca.png"
+                                    alt="Sistema de Controle Acadêmico"
+                                />
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">
+                                    SCA - Sistema de Controle Acadêmico
+                                </h3>
+                                <p class="project-description">
+                                    Especificação de requisitos e diagramas de
+                                    classes para sistema acadêmico completo.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag">UML</span>
+                                    <span class="tag"
+                                        >Engenharia de Software</span
+                                    >
+                                </div>
+                                <div class="project-links">
+                                    <a
+                                        href="https://github.com/LuisFelipeAN/SCA"
+                                        target="_blank"
+                                        class="project-link"
+                                    >
+                                        Ver no GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experiência -->
+            <section class="section experience" id="experience">
+                <div class="container">
+                    <h2 class="section-title">Experiência Profissional</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3 class="timeline-title">
+                                        Analista de Sistemas
+                                    </h3>
+                                    <span class="timeline-date"
+                                        >Maio 2022 - Presente</span
+                                    >
+                                </div>
+                                <p class="timeline-company">
+                                    Nativa Desenvolvimento
+                                </p>
+                                <p class="timeline-description">
+                                    Desenvolvimento web completo, incluindo
+                                    levantamento de requisitos, arquitetura,
+                                    implementação back-end e front-end, e testes
+                                    unitários. Trabalho com metodologias ágeis e
+                                    colaboração em equipe.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3 class="timeline-title">
+                                        Tutor de Algoritmos
+                                    </h3>
+                                    <span class="timeline-date"
+                                        >Nov 2021 - Fev 2022</span
+                                    >
+                                </div>
+                                <p class="timeline-company">
+                                    Universidade Federal de Juiz de Fora
+                                </p>
+                                <p class="timeline-description">
+                                    Auxílio na elaboração de exercícios e
+                                    monitoria de alunos na disciplina de
+                                    Algoritmos, reforçando conceitos de
+                                    programação e lógica.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3 class="timeline-title">
+                                        Bolsista de Iniciação Científica
+                                    </h3>
+                                    <span class="timeline-date"
+                                        >Ago 2019 - Jul 2020</span
+                                    >
+                                </div>
+                                <p class="timeline-company">
+                                    Universidade Federal de Juiz de Fora
+                                </p>
+                                <p class="timeline-description">
+                                    Gerenciamento de variabilidades em
+                                    engenharia de segurança de sistemas
+                                    críticos. Desenvolvimento de extensões para
+                                    as ferramentas OSATE-AADL e HiPHOPS.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3 class="timeline-title">
+                                        Bolsista de Iniciação Científica
+                                    </h3>
+                                    <span class="timeline-date"
+                                        >Ago 2018 - Jul 2019</span
+                                    >
+                                </div>
+                                <p class="timeline-company">
+                                    Universidade Federal de Juiz de Fora
+                                </p>
+                                <p class="timeline-description">
+                                    Desenvolvimento e integração de ferramentas
+                                    dirigidas a modelos para apoio à engenharia
+                                    e certificação de sistemas críticos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Formação -->
+            <section class="section education" id="education">
+                <div class="container">
+                    <h2 class="section-title">Formação Acadêmica</h2>
+                    <div class="education-grid">
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                                </svg>
+                            </div>
+                            <div class="education-content">
+                                <h3 class="education-degree">
+                                    Mestrado em Ciências da Computação
+                                </h3>
+                                <p class="education-school">
+                                    Universidade Federal de Juiz de Fora
+                                </p>
+                                <p class="education-period">2021 - 2024</p>
+                                <p class="education-thesis">
+                                    <strong>TCC:</strong> "A Model-Driven
+                                    Methodology to Support Runtime Assurance of
+                                    Open and Adaptive Systems"
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="education-card">
+                            <div class="education-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                                </svg>
+                            </div>
+                            <div class="education-content">
+                                <h3 class="education-degree">
+                                    Bacharel em Ciências da Computação
+                                </h3>
+                                <p class="education-school">
+                                    Universidade Federal de Juiz de Fora
+                                </p>
+                                <p class="education-period">2014 - 2019</p>
+                                <p class="education-thesis">
+                                    <strong>TCC:</strong> "SACM Editor: an OMG
+                                    standard compliant model-based tool for
+                                    specification of Assurance Cases for
+                                    Safety-Critical Systems"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certificados -->
+            <section class="section certificates" id="certificates">
+                <div class="container">
+                    <h2 class="section-title">Certificados</h2>
+                    <div class="certificates-grid">
+                        <a
+                            href="https://www.linkedin.com/learning/certificates/2fac90312eca000ed89e0304513c4dc979ac1b78df25884471cd05715410d28a"
+                            target="_blank"
+                            class="certificate-card"
+                        >
+                            <div class="certificate-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <circle cx="12" cy="8" r="7" />
+                                    <polyline
+                                        points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="certificate-content">
+                                <h3 class="certificate-title">
+                                    Learning Spring with Spring Boot
+                                </h3>
+                                <p class="certificate-issuer">
+                                    LinkedIn Learning
+                                </p>
+                                <p class="certificate-year">2019</p>
+                            </div>
+                        </a>
+
+                        <a
+                            href="https://efset.org/cert/vY4u5Q"
+                            target="_blank"
+                            class="certificate-card"
+                        >
+                            <div class="certificate-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                                    <path
+                                        d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="certificate-content">
+                                <h3 class="certificate-title">
+                                    EF SET English Certificate
+                                </h3>
+                                <p class="certificate-issuer">
+                                    EF Education First
+                                </p>
+                                <p class="certificate-year">
+                                    72/100 (C2 Proficient)
+                                </p>
+                            </div>
+                        </a>
+
+                        <a
+                            href="https://freecodecamp.org/certification/fcc9c470496-502a-42f8-bcfb-62e4f6fc9832/responsive-web-design"
+                            target="_blank"
+                            class="certificate-card"
+                        >
+                            <div class="certificate-icon">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M12 15l-2 5l9-13h-6l2-5l-9 13h6z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="certificate-content">
+                                <h3 class="certificate-title">
+                                    Responsive Web Design
+                                </h3>
+                                <p class="certificate-issuer">freeCodeCamp</p>
+                                <p class="certificate-year">2023</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contato -->
+            <section class="section contact" id="contact">
+                <div class="container">
+                    <h2 class="section-title">Entre em Contato</h2>
+                    <div class="contact-content">
+                        <p class="contact-intro">
+                            Estou aberto a novas oportunidades e projetos
+                            interessantes. Sinta-se à vontade para entrar em
+                            contato!
+                        </p>
+                        <div class="contact-links">
+                            <a
+                                href="mailto:luis.felipe.almeida.nascimento@gmail.com"
+                                class="contact-link"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                                    />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                                <span>Email</span>
+                            </a>
+                            <a
+                                href="https://github.com/LuisFelipeAN"
+                                target="_blank"
+                                class="contact-link"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                                    />
+                                </svg>
+                                <span>GitHub</span>
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/luis-felipe-almeida-nascimento-73b029223"
+                                target="_blank"
+                                class="contact-link"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                                    />
+                                </svg>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>
+                    &copy; 2024 Luis Felipe de Almeida Nascimento. Todos os
+                    direitos reservados.
+                </p>
             </div>
+        </footer>
+
+        <script src="js/script.js"></script>
     </body>
 </html>
